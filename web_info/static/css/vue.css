@@ -1,0 +1,31 @@
+/*VueEditor*/
+.markdown-section h3{
+    font-size: 24px;
+    font-size: 1.5rem;
+    margin: 40px 0 9.6px;
+    margin: 40px 0 .6rem;
+}
+.markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+.markdown-section ol, .markdown-section ul {
+    padding-left: 24px;
+    padding-left: 1.5rem;
+}
+.markdown-section ol, .markdown-section p, .markdown-section ul {
+    line-height: 25.6px;
+    line-height: 1.6rem;
+    word-spacing: .8px;
+    word-spacing: .05rem;
+}
+.markdown-section figure, .markdown-section ol, .markdown-section p, .markdown-section ul {
+    margin: 1.2em 0;
+}
+.markdown-section blockquote {
+    border-left: 4px solid #42b983;
+    border-left: 4px solid var(--theme-color, #42b983);
+    color: #858585;
+    margin: 2em 0;
+    padding-left: 20px;
+}
