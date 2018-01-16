@@ -140,4 +140,23 @@
     .sidebar > ul {
         height:100%;
     }
+
+    @media (max-width: 767px){
+        .sidebar[data-v-2b29b166] {
+            display: block;
+            position: relative;
+            width: 30%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: #eef1f6;
+            verflow-y: auto;
+            height: 100%;
+            font-size: 10px;
+            overflow-x: scroll;
+        }
+        .el-submenu .el-menu {
+            background-color: rgba(0,0,0,0);
+        }
+    }
 </style>
