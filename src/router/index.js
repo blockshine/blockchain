@@ -48,6 +48,18 @@ export default new Router({
                 {
                     path: '/transaction',
                     component: resolve => require(['../components/page/transaction.vue'], resolve)
+                },
+                {
+                    path: '/log-history',
+                    component: resolve => require(['../components/page/log-history.vue'], resolve)
+                },
+                {
+                    path: '/private_chain_solution',
+                    component: resolve => require(['../components/page/private_chain_solution.vue'], resolve)
+                },
+                {
+                    path: '/public_chain_solution',
+                    component: resolve => require(['../components/page/public_chain_solution.vue'], resolve)
                 }
             ]
         }
