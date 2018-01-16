@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <div class="logo">BME区块链</div>
+        <div class="logo">聚链</div>
         <div class="sel-info">
             <!--<el-input-->
                 <!--placeholder="请输入内容"-->
