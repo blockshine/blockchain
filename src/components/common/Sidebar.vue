@@ -42,6 +42,18 @@
                             {
                                 index: 'basicConcept',
                                 title: '基本概念'
+                            },
+
+
+                            {
+                                index:'public_chain_solution',
+                                title:'公有链解决方案'
+                            },
+
+
+                            {
+                               index:'private_chain_solution',
+                               title:'私有链解决方案'
                             }
                         ]
                     },
@@ -115,7 +127,12 @@
                                 title:'交易',
                             },
                         ]
-                    }
+                    },
+                     {
+                     // icon: 'el-icon-menu',
+                      index: 'log-history',
+                      title: '更新日志'
+                     }
                 ]
             }
         },
