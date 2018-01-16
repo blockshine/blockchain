@@ -119,13 +119,7 @@
                                         title:'获取跟命名空间'
                                     }
                                 ]
-                            },{
-                                index:'nameWithmos',
-                                title:'命名空间与马赛克',
-                            },{
-                                index:'transaction',
-                                title:'交易',
-                            },
+                            }
                         ]
                     },
                      {
