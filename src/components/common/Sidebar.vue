@@ -97,7 +97,7 @@
                                 group:'账号',
                                 subs:[
                                     {
-                                        index:'',
+                                        index:'account_add',
                                         title:'创建账户'
                                     },
                                     {

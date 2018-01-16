@@ -48,6 +48,10 @@ export default new Router({
                 {
                     path: '/transaction',
                     component: resolve => require(['../components/page/transaction.vue'], resolve)
+                },
+                {
+                   path:'/account_add',
+                   component: resolve => require(['../components/page/account/account_add.vue'], resolve)
                 }
             ]
         }
