@@ -1,27 +1,36 @@
 <template>
-    <div class="sidebar">
-        <el-menu :default-active="onRoutes" class="el-menu-vertical-demo"  unique-opened router>
-            <template v-for="item in items">
-                <template v-if="item.subs">
-                    <el-submenu :index="item.index">
-                        <template slot="title"><i :class="item.icon"></i>{{ item.title }}</template>
-                        <template v-for="subItem in item.subs" >
-                            <el-submenu :index="subItem.index" v-if="subItem.group">
-                                <span slot="title">{{subItem.group}}</span>
-                                <el-menu-item v-for="index in subItem.subs"  :index="index.index">{{index.title}}</el-menu-item>
-                            </el-submenu>
-                            <el-menu-item v-else :index="subItem.index">{{subItem.title}}
-                            </el-menu-item>
-                        </template>
-                    </el-submenu>
+    <div  class="sidebardiv" >
+        <div  class="sidebar" v-show="isCollapse">
+            <el-menu :default-active="onRoutes" class="el-menu-vertical-demo"  unique-opened router>
+                <template v-for="item in items">
+                    <template v-if="item.subs">
+                        <el-submenu :index="item.index">
+                            <template slot="title"><i :class="item.icon"></i>{{ item.title }}</template>
+                            <template v-for="subItem in item.subs" >
+                                <el-submenu :index="subItem.index" v-if="subItem.group">
+                                    <span slot="title">{{subItem.group}}</span>
+                                    <el-menu-item v-for="index in subItem.subs"  :index="index.index">{{index.title}}</el-menu-item>
+                                </el-submenu>
+                                <el-menu-item v-else :index="subItem.index">{{subItem.title}}
+                                </el-menu-item>
+                            </template>
+                        </el-submenu>
+                    </template>
+                    <template v-else>
+                        <el-menu-item :index="item.index">
+                            <i :class="item.icon"></i>{{ item.title }}
+                        </el-menu-item>
+                    </template>
                 </template>
-                <template v-else>
-                    <el-menu-item :index="item.index">
-                        <i :class="item.icon"></i>{{ item.title }}
-                    </el-menu-item>
-                </template>
-            </template>
-        </el-menu>
+            </el-menu>
+        </div>
+        <button class="sidebar-toggle" v-on:click="toggleList">
+            <el-col class="sidebar-toggle-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </el-col>
+        </button>
     </div>
 </template>
 
@@ -29,6 +38,9 @@
     export default {
         data() {
             return {
+                screenWidth:document.body.clientWidth,
+                timer:false,
+                isCollapse:true,
                 items: [
                     {
                         // icon: 'el-icon-menu',
@@ -130,9 +142,49 @@
                 ]
             }
         },
+        mounted () {
+            const that = this
+            if(parseInt(that.screenWidth)<=768){
+                that.isCollapse=false
+            }else
+            {
+                that.isCollapse=true
+            }
+            window.onresize = () => {
+                return (() => {
+                    window.screenWidth = document.body.clientWidth
+                    that.screenWidth = window.screenWidth
+                })()
+            }
+        },
+        methods:{
+            toggleList(){
+                this.isCollapse=!this.isCollapse
+            }
+        },
         computed:{
             onRoutes(){
+                //this.isCollapse=!this.isCollapse;
                 return this.$route.path.replace('/','');
+            }
+        },
+        watch: {
+            screenWidth (val) {
+                if (!this.timer) {
+                    this.screenWidth = val
+                    this.timer = true
+                    let that = this
+                    setTimeout(function () {
+                        // that.screenWidth = that.$store.state.canvasWidth
+                        if(parseInt(that.screenWidth)<=768){
+                            that.isCollapse=false
+                        }else
+                        {
+                            that.isCollapse=true
+                        }
+                        that.timer = false
+                    }, 400)
+                }
             }
         }
     }
@@ -147,27 +199,33 @@
         top: 70px;
         bottom:0;
         background: #fff;
+        z-index: 3;
     }
     .sidebar > ul {
         height:100%;
     }
 
     @media (max-width: 767px){
-        .sidebar[data-v-2b29b166] {
+        .sidebardiv{
+            /*background: #eef1f6;*/
+            height: 100%;
+        }
+        .sidebar{
             display: block;
             position: relative;
-            width: 30%;
             left: 0;
             top: 0;
             bottom: 0;
-            background: #eef1f6;
             verflow-y: auto;
             height: 100%;
             font-size: 10px;
             overflow-x: scroll;
+            z-index:2;
         }
-        .el-submenu .el-menu {
-            background-color: rgba(0,0,0,0);
+        .el-submenu .el-menu-item {
+            height: 50px;
+            line-height: 50px;
+            padding: 0 25px;
         }
     }
 </style>
