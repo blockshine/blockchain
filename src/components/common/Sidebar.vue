@@ -98,7 +98,7 @@
                                 subs:[
                                     {
                                         index:'account_add',
-                                        title:'创建账户'
+                                        title:'账户相关'
                                     },
                                     {
                                         index:'',
