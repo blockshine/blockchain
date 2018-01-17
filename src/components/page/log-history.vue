@@ -1,13 +1,20 @@
 <template>
     <div>
         <div class="ms-doc">
+        <article class="markdown-section" id="main">
         <p>
+        <h2 id="10" style="color:rgba(0, 0, 0, 0.85);font-family:-apple-system, system-ui, &quot;background-color:#FFFFFF;">
+        Release 2.0
+        </h2>
+        <p style="font-size:14px;color:#24292E;font-family:-apple-system, system-ui, &quot;background-color:#FFFFFF;">
+        <span style="font-weight:600;">发布日期：2018年3月1日</span>
+        </p>
+        <p style="font-size:14px;color:#24292E;font-family:-apple-system, system-ui, &quot;background-color:#FFFFFF;">
+        delivering soon...
+        </p>
 <h2 id="10" style="color:rgba(0, 0, 0, 0.85);font-family:-apple-system, system-ui, &quot;background-color:#FFFFFF;">
 Release 1.0
 </h2>
-<p>
----------------------------------------
-</p>
 <p style="font-size:14px;color:#24292E;font-family:-apple-system, system-ui, &quot;background-color:#FFFFFF;">
 <span style="font-weight:600;">发布日期：2018年1月16日</span>
 </p>
@@ -39,6 +46,7 @@ Release 1.0
 欢迎各位区块链开发者进行使用，并提出您宝贵的建议。
 </p>
 </p>
+</article>
         </div>
 
     </div>
