@@ -54,6 +54,10 @@ export default new Router({
                    component: resolve => require(['../components/page/account/account_add.vue'], resolve)
                 },
                 {
+                   path:'/block_query',
+                   component: resolve => require(['../components/page/block/block_query.vue'], resolve)
+                },
+                {
                     path: '/log-history',
                     component: resolve => require(['../components/page/log-history.vue'], resolve)
                 },
