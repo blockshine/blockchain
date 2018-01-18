@@ -111,15 +111,22 @@
                                     {
                                         index:'account_add',
                                         title:'账户相关'
-                                    },
-                                    {
-                                        index:'',
-                                        title:'通过地址获取账户信息'
                                     }
                                 ]
                             },
                             {
+
                                 index:'7',
+                                group:'区块',
+                                subs:[
+                                    {
+                                        index:'block_query',
+                                        title:'区块相关'
+                                    }
+                                ]
+                            },
+                            {
+                                index:'8',
                                 group:'区块链',
                                 subs:[
                                     {
