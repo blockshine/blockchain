@@ -68,6 +68,22 @@ export default new Router({
                 {
                     path: '/public_chain_solution',
                     component: resolve => require(['../components/page/public_chain_solution.vue'], resolve)
+                },
+                {
+                    path: '/complieContract',
+                    component: resolve => require(['../components/page/contract/contract_compiling.vue'], resolve)
+                },
+                {
+                    path: '/deployContract',
+                    component: resolve => require(['../components/page/contract/contract_deployment.vue'], resolve)
+                },
+                {
+                    path: '/invokeContract',
+                    component: resolve => require(['../components/page/contract/contract_invoking.vue'], resolve)
+                },
+                {
+                    path: '/getContractStatus',
+                    component: resolve => require(['../components/page/contract/contract_status.vue'], resolve)
                 }
             ]
         }

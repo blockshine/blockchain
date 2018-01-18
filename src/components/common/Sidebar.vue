@@ -92,15 +92,23 @@
                             },
                             {
                                 index:'5',
-                                group:'服务器',
+                                group:'合约',
                                 subs:[
                                     {
-                                        index:'5-1',
-                                        title:'获取服务器心跳'
+                                        index:'complieContract',
+                                        title:'编译验证合约'
                                     },
                                     {
-                                        index:'5-2',
-                                        title:'获取服务器心态'
+                                        index:'deployContract',
+                                        title:'部署合约'
+                                    },
+                                    {
+                                        index:'invokeContract',
+                                        title:'调用合约'
+                                    },
+                                    {
+                                        index:'getContractStatus',
+                                        title:'查询合约状态'
                                     }
                                 ]
                             },
