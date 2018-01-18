@@ -47,7 +47,7 @@ export default new Router({
                 },
                 {
                     path: '/transaction',
-                    component: resolve => require(['../components/page/transaction.vue'], resolve)
+                    component: resolve => require(['../components/page/transaction/transaction_add.vue'], resolve)
                 },
                 {
                    path:'/account_add',
