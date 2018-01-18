@@ -114,11 +114,19 @@
                             },
                             {
                                 index:'6',
-                                group:'账号',
+                                group:'账户',
                                 subs:[
                                     {
                                         index:'account_add',
-                                        title:'账户相关'
+                                        title:'账户创建'
+                                    },
+                                    {
+                                        index:'account_list',
+                                        title:'账户集合'
+                                    },
+                                    {
+                                        index:'account_balance',
+                                        title:'账户余额'
                                     }
                                 ]
                             },
@@ -129,7 +137,15 @@
                                 subs:[
                                     {
                                         index:'block_query',
-                                        title:'区块相关'
+                                        title:'区块信息'
+                                    },
+                                    {
+                                        index:'block_count',
+                                        title:'区块数量'
+                                    },
+                                    {
+                                        index:'block_trans',
+                                        title:'区块交易'
                                     }
                                 ]
                             },
