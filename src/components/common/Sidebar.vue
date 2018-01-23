@@ -150,7 +150,7 @@
                                     {
                                         index:'block_count',
                                         title:'区块总数'
-                                    },
+                                    }
                                 ]
                             },
                             {
@@ -249,8 +249,9 @@
         left: 0;
         top: 70px;
         bottom:0;
-        background: #fff;
+       /* background: #fff;*/
         z-index: 3;
+        overflow: scroll;
     }
     .sidebar > ul {
         height:100%;
