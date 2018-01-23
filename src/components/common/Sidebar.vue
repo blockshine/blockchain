@@ -81,6 +81,21 @@
                         subs: [
                             {
                                 index: '4',
+                                group:'授权',
+                                // title: '授权',
+                                subs:[
+                                    {
+                                        index:'token',
+                                        title:'获取API接入授权码'
+                                    },
+                                    {
+                                        index:'resetToken',
+                                        title:'刷新api授权码'
+                                    }
+                                ]
+                            },
+                            {
+                                index: '5',
                                 group:'准备',
                                 // title: '准备',
                                 subs:[
@@ -91,7 +106,7 @@
                                 ]
                             },
                             {
-                                index:'5',
+                                index:'6',
                                 group:'合约',
                                 subs:[
                                     {
@@ -113,7 +128,7 @@
                                 ]
                             },
                             {
-                                index:'6',
+                                index:'7',
                                 group:'账户',
                                 subs:[
                                     {
@@ -132,7 +147,7 @@
                             },
                             {
 
-                                index:'7',
+                                index:'8',
                                 group:'区块',
                                 subs:[
                                     {
@@ -154,7 +169,7 @@
                                 ]
                             },
                             {
-                                index:'8',
+                                index:'9',
                                 group:'交易',
                                 subs:[
                                     {
