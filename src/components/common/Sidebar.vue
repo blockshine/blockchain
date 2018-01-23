@@ -136,31 +136,21 @@
                                 group:'区块',
                                 subs:[
                                     {
-                                        index:'block_query',
-                                        title:'区块信息'
+                                        index:'block_detail',
+                                        title:'区块详情'
+                                    },
+                                    {
+                                        index:'block_page',
+                                        title:'区块分页'
+                                    },
+                                    {
+                                        index:'block_range',
+                                        title:'查询指定范围内的区块列表'
                                     },
                                     {
                                         index:'block_count',
-                                        title:'区块数量'
+                                        title:'区块总数'
                                     },
-                                    {
-                                        index:'block_trans',
-                                        title:'区块交易'
-                                    }
-                                ]
-                            },
-                            {
-                                index:'8',
-                                group:'区块链',
-                                subs:[
-                                    {
-                                        index:'',
-                                        title:'发起一笔转账交易'
-                                    },
-                                    {
-                                        index:'',
-                                        title:'获取跟命名空间'
-                                    }
                                 ]
                             },
                             {
@@ -168,13 +158,29 @@
                                 group:'交易',
                                 subs:[
                                     {
-                                        index:'',
-                                        title:'发起一笔转账交易'
+                                        index:'transaction_count',
+                                        title:'查询交易总数'
                                     },
                                     {
-                                        index:'',
-                                        title:'获取跟命名空间'
-                                    }
+                                        index:'transaction_receipt',
+                                        title:'查询交易回执'
+                                    },
+                                    {
+                                        index:'transaction_detail',
+                                        title:'查询交易详情'
+                                    },
+                                     {
+                                         index:'transaction_discard',
+                                         title:'查询指定时区间内的非法交易'
+                                     },
+                                    {
+                                         index:'transaction_add',
+                                         title:'新增交易'
+                                     },
+                                     {
+                                          index:'transaction_batch',
+                                          title:'批量交易'
+                                      }
                                 ]
                             }
                         ]
