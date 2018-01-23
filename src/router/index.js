@@ -46,8 +46,28 @@ export default new Router({
                     component: resolve => require(['../components/page/nameWithmos.vue'], resolve)
                 },
                 {
-                    path: '/transaction',
+                    path: '/transaction_add',
                     component: resolve => require(['../components/page/transaction/transaction_add.vue'], resolve)
+                },
+                {
+                    path: '/transaction_batch',
+                    component: resolve => require(['../components/page/transaction/transaction_batch.vue'], resolve)
+                },
+                {
+                    path: '/transaction_count',
+                    component: resolve => require(['../components/page/transaction/transaction_count.vue'], resolve)
+                },
+                {
+                    path: '/transaction_detail',
+                    component: resolve => require(['../components/page/transaction/transaction_detail.vue'], resolve)
+                },
+                {
+                    path: '/transaction_discard',
+                    component: resolve => require(['../components/page/transaction/transaction_discard.vue'], resolve)
+                },
+                {
+                    path: '/transaction_receipt',
+                    component: resolve => require(['../components/page/transaction/transaction_receipt.vue'], resolve)
                 },
                 {
                     //创建账户
