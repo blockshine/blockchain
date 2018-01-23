@@ -92,25 +92,41 @@
                             },
                             {
                                 index:'5',
-                                group:'服务器',
+                                group:'合约',
                                 subs:[
                                     {
-                                        index:'5-1',
-                                        title:'获取服务器心跳'
+                                        index:'complieContract',
+                                        title:'编译验证合约'
                                     },
                                     {
-                                        index:'5-2',
-                                        title:'获取服务器心态'
+                                        index:'deployContract',
+                                        title:'部署合约'
+                                    },
+                                    {
+                                        index:'invokeContract',
+                                        title:'调用合约'
+                                    },
+                                    {
+                                        index:'getContractStatus',
+                                        title:'查询合约状态'
                                     }
                                 ]
                             },
                             {
                                 index:'6',
-                                group:'账号',
+                                group:'账户',
                                 subs:[
                                     {
                                         index:'account_add',
-                                        title:'账户相关'
+                                        title:'账户创建'
+                                    },
+                                    {
+                                        index:'account_list',
+                                        title:'账户集合'
+                                    },
+                                    {
+                                        index:'account_balance',
+                                        title:'账户余额'
                                     }
                                 ]
                             },
@@ -121,7 +137,15 @@
                                 subs:[
                                     {
                                         index:'block_query',
-                                        title:'区块相关'
+                                        title:'区块信息'
+                                    },
+                                    {
+                                        index:'block_count',
+                                        title:'区块数量'
+                                    },
+                                    {
+                                        index:'block_trans',
+                                        title:'区块交易'
                                     }
                                 ]
                             },
