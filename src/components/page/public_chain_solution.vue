@@ -30,7 +30,7 @@
    聚链使用Kademlia算法评估节点质量，踢出不健康的低声望节点，保护区块链健壮性；
  </li>
  <li>
-   共识机制：Delegated Byzantine Fault Tolerant
+   共识机制：Delegated Poof of Stake
  </li>
 </ul>
 <h3>
