@@ -1,0 +1,170 @@
+/*VueEditor*/
+.markdown-section h3{
+    font-size: 24px;
+    font-size: 1.5rem;
+    /*margin: 40px 0 9.6px;*/
+    /*margin: 40px 0 .6rem;*/
+}
+.markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+.markdown-section ol, .markdown-section ul {
+    padding-left: 24px;
+    padding-left: 1.5rem;
+}
+.markdown-section ol, .markdown-section p, .markdown-section ul {
+    line-height: 25.6px;
+    line-height: 1.6rem;
+    word-spacing: .8px;
+    word-spacing: .05rem;
+}
+.markdown-section figure, .markdown-section ol, .markdown-section p, .markdown-section ul {
+    margin: 1.2em 0;
+}
+.markdown-section blockquote {
+    border-left: 4px solid #42b983;
+    border-left: 4px solid var(--theme-color, #42b983);
+    color: #858585;
+    margin: 2em 0;
+    padding-left: 20px;
+}
+.ms-doc{
+    width:100%;
+    max-width: 980px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: #48576a;
+    font-size: 90%;
+}
+.ms-doc h3{
+    padding: 9px 10px 10px;
+    line-height: 17px;
+    background-color: #f5f5f5;
+    border: 0px solid #d8d8d8;
+    border-bottom: 0;
+    border-radius: 3px 3px 0 0;
+}
+.ms-doc article{
+    padding: 0 10px 20px;
+    word-wrap: break-word;
+    background-color: #fff;
+    border: 0px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.ms-doc article h1{
+    font-size:32px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.ms-doc article h2 {
+    margin: 24px 0 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    padding-bottom: 7px;
+    font-size: 24px;
+    border-bottom: 1px solid #eee;
+}
+.ms-doc article p,
+.ms-doc article table,
+.ms-doc article pre{
+    margin-bottom: 15px;
+    line-height: 1.5;
+    padding-left: 20px;
+}
+.ms-doc article .el-checkbox{
+    margin-bottom: 5px;
+}
+.ms-doc article table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: block;
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+    overflow: auto;
+    width: 100%;
+}
+.ms-doc article table tr{
+    border-top: 1px solid #ccc;
+}
+.ms-doc article th {
+    border: 1px solid #ddd;
+    padding: 6px 13px;
+    font-weight: 700;
+}
+.ms-doc article td {
+    border: 1px solid #ddd;
+    padding: 6px 13px;
+}
+body.sticky .sidebar, body.sticky .sidebar-toggle {
+    position: fixed;
+}
+@media (max-width: 767px) {
+    .content{
+        background: none repeat scroll 0 0 #fff;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50px;
+        padding: 4px 0px;
+        margin-bottom: 38px;
+        bottom: 0;
+        width: auto;
+        box-sizing: border-box;
+        overflow-y: scroll;
+    }
+    .markdown-section h3{
+        font-size: 24px;
+        font-size: 1.5rem;
+        margin: 4px 0 9.6px;
+        margin: 4px 0 .6rem;
+    }
+    .header .logo{
+        width: 100px!important;
+    }
+    .el-menu {
+        width: auto!important;
+    }
+    .el-submenu .el-menu{
+        background-color: rgba(0,0,0,0)!important;
+    }
+    .el-submenu .el-menu-item:hover, .el-submenu__title:hover  {
+        background-color: rgba(0,0,0,0)!important;
+        color: #20a0ff!important;
+
+    }
+    .is-active{
+        color: #20a0ff;
+        background-color: rgba(0,0,0,0)!important;
+    }
+    .sidebar-toggle {
+        background-color: transparent;
+        width: auto;
+    }
+
+    .sidebar-toggle {
+        background-color: transparent;
+        background-color: hsla(0, 0%, 100%, .8);
+        border: 0;
+        outline: none;
+        padding: 10px;
+        bottom: 0;
+        left: 0;
+        position: fixed !important;
+        text-align: center;
+        -webkit-transition: opacity .3s;
+        transition: opacity .3s;
+        width: 30px;
+        width: 284px;
+        z-index: 4;
+    }
+    .sidebar-toggle span {
+        background-color: #42b983;
+        background-color: var(--theme-color, #42b983);
+        display: block;
+        margin-bottom: 4px;
+        width: 16px;
+        height: 2px;
+    }
+}
