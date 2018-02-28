@@ -55,45 +55,27 @@
                                 index: 'basicConcept',
                                 title: '基本概念'
                             },
-
-
                             {
                                 index:'public_chain_solution',
                                 title:'公有链解决方案'
                             },
-
-
                             {
                                index:'private_chain_solution',
                                title:'私有链解决方案'
+                            },
+                            {
+                               index:'solution',
+                               title:'行业解决方案'
                             }
                         ]
                     },
-                    {
-                        // icon: 'el-icon-setting',
-                        index: '',
-                        title: '快速入门'
-                    },
+
                     {
                         // icon: 'el-icon-menu',
                         index: '3',
-                        title: 'API参考',
+                        title: '公链API参考',
                         subs: [
-                            {
-                                index: '4',
-                                group:'授权',
-                                // title: '授权',
-                                subs:[
-                                    {
-                                        index:'token',
-                                        title:'获取API接入授权码'
-                                    },
-                                    {
-                                        index:'resetToken',
-                                        title:'刷新api授权码'
-                                    }
-                                ]
-                            },
+                            
                             {
                                 index: '5',
                                 group:'准备',

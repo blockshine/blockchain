@@ -1,22 +1,195 @@
 <template>
     <div>
         <div class="ms-doc">
-            <article class="markdown-section" id="main"><p>为将区块链性能提升至全新高度，聚链真正100%全新代码。使开发者可以迅速和节省成本部署基于区块链的应用。聚链提供了可靠签名合约保障极高的安全性。由多层架构保障高吞吐量的实现，使应用仅在区块链层面存储核心信息，使区块链层高效安全运营。私有链和公有链的无缝集成，用户可以选择私网环境独立部署，也可以选择公网环境与公有链连接达成更佳的数据管理。</p>
-                <h3>易用性</h3>
-                <ul>
-                <li>极短块时间</li>
-                <li>钱包具备连接远程节点快速开始的功能，无需加载完整链</li>
-            </ul>
-                <h3>安全性和用户保护</h3>
-                <ul>
-                    <li>聚链的360块后完全不可变特性使得POW或POS区块链存在的长期入侵成功可能性成为过去</li>
-                    <li>聚链使用 Eigentrust++算法评估节点质量，踢出不健康的低声望节点，保护区块链健壮性</li>
-                </ul>
-                <h3>可达性</h3>
-                <ul>
-                    <li>可以自主选择连接全球范围内任意一个聚链网络中的节点，也可以由带有View功能的DNS连接公共推荐节点，有利于轻量或移动APP的实施</li>
-                    <li>聚链软件在几秒钟内就能安装（或解压）完成开启使用，连接远程节点后可立即开始区块链操作</li>
-                </ul>
+            <article class="markdown-section" id="main">
+
+                <h3>合约状态查询</h3>
+                <p><strong>请求语法</strong></p>
+                <pre v-pre="" data-lang=""><code class="lang-">GET /contract/status</code></pre>
+                <p><strong>请求参数</strong></p>
+                <p>
+                String bnOrId : 区块编号, <br/>
+                Boolean fullTransactionObjects : 如果为真，则返回完整的事务对象，如果仅为假，则返回事务的散列值。
+                </p>
+                <p><strong>响应参数</strong></p>
+                <p>
+        <table>
+        <thead>
+        <tr>
+        <th style="text-align:left" >BlockResult</th>
+        </tr>
+        </thead>
+        <thead>
+        <tr>
+        <th style="text-align:left">参数</th>
+        <th style="text-align:left">类型</th>
+        <th style="text-align:left">说明</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr>
+        <td style="text-align:left">number</td>
+        <td style="text-align:left">String</td>
+        <td style="text-align:left"> QUANTITY - the block number. null when its pending block.</td>
+        </tr>
+
+        <tr>
+        <td style="text-align:left">hash</td>
+        <td style="text-align:left">String</td>
+        <td style="text-align:left"> DATA, 32 Bytes - hash of the block. null when its pending block.</td>
+        </tr>
+
+        <tr>
+        <td style="text-align:left">parentHash</td>
+        <td style="text-align:left">String</td>
+        <td style="text-align:left"> DATA, 32 Bytes - hash of the parent block.</td>
+        </tr>
+
+        <tr>
+        <td style="text-align:left">nonce</td>
+        <td style="text-align:left">String</td>
+        <td style="text-align:left">DATA, 8 Bytes - hash of the generated proof-of-work. null when its pending block.</td>
+        </tr>
+
+        <tr>
+        <td style="text-align:left">sha3Uncles</td>
+        <td style="text-align:left">String</td>
+        <td style="text-align:left"> DATA, 32 Bytes - SHA3 of the uncles data in the block.</td>
+        </tr>
+
+        <tr>
+        <td style="text-align:left">logsBloom</td>
+        <td style="text-align:left">String</td>
+        <td style="text-align:left"> DATA, 256 Bytes - the bloom filter for the logs of the block. null when its pending block.</td>
+        </tr>
+
+        <tr>
+        <td style="text-align:left">transactionsRoot</td>
+        <td style="text-align:left">String</td>
+        <td style="text-align:left"> DATA, 32 Bytes - the root of the transaction trie of the block.</td>
+        </tr>
+
+        <tr>
+        <td style="text-align:left">stateRoot</td>
+        <td style="text-align:left">String</td>
+        <td style="text-align:left"> DATA, 32 Bytes - the root of the final state trie of the block.</td>
+        </tr>
+        <tr>
+        <td style="text-align:left">receiptRoot</td>
+        <td style="text-align:left">String</td>
+        <td style="text-align:left"> DATA, 32 Bytes - the root of the receipts trie of the block.</td>
+        </tr>
+
+        <tr>
+        <td style="text-align:left">miner</td>
+        <td style="text-align:left">String</td>
+        <td style="text-align:left"> DATA, 20 Bytes - the address of the beneficiary to whom the mining rewards were given.</td>
+        </tr>
+        <tr>
+        <td style="text-align:left">difficulty</td>
+        <td style="text-align:left">String</td>
+        <td style="text-align:left"> QUANTITY - integer of the difficulty for this block.</td>
+        </tr>
+
+        <tr>
+        <td style="text-align:left">totalDifficulty</td>
+        <td style="text-align:left">String</td>
+        <td style="text-align:left"> QUANTITY - integer of the total difficulty of the chain until this block.</td>
+        </tr>
+        <tr>
+        <td style="text-align:left">extraData</td>
+        <td style="text-align:left">String</td>
+        <td style="text-align:left"> DATA - the "extra data" field of this block</td>
+        </tr>
+
+        <tr>
+        <td style="text-align:left">size</td>
+        <td style="text-align:left">String</td>
+        <td style="text-align:left"> QUANTITY - integer the size of this block in bytes.</td>
+        </tr>
+        <tr>
+        <td style="text-align:left">gasLimit</td>
+        <td style="text-align:left">String</td>
+        <td style="text-align:left"> QUANTITY - the maximum gas allowed in this block.</td>
+        </tr>
+
+        <tr>
+        <td style="text-align:left">gasUsed</td>
+        <td style="text-align:left">String</td>
+        <td style="text-align:left"> QUANTITY - the total used gas by all transactions in this block.</td>
+        </tr>
+        <tr>
+        <td style="text-align:left">timestamp</td>
+        <td style="text-align:left">String</td>
+        <td style="text-align:left"> QUANTITY - the unix timestamp for when the block was collated.</td>
+        </tr>
+        <tr>
+        <td style="text-align:left">transactions</td>
+        <td style="text-align:left">Object[]</td>
+        <td style="text-align:left"> Array - Array of transaction objects, or 32 Bytes transaction hashes depending on the last given parameter.</td>
+        </tr>
+        <tr>
+        <td style="text-align:left">uncles</td>
+        <td style="text-align:left">String[]</td>
+        <td style="text-align:left"> Array - Array of uncle hashes.</td>
+        </tr>
+
+        </tbody>
+        </table>
+
+
+
+                </p>
+                <table>
+                    <thead>
+                    <tr>
+                        <th style="text-align:left">参数</th>
+                        <th style="text-align:left">类型</th>
+                        <th style="text-align:left">说明</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td style="text-align:left">BlockResult</td>
+                        <td style="text-align:left">BlockResult</td>
+                        <td style="text-align:left">返回区块的基本信息</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p><strong>请求示例</strong></p>
+                <pre v-pre="" data-lang=""><code class="lang-">http://localhost:8090/block/info?bnOrId=0x1942&fullTransactionObjects=true</code></pre>
+                <p><strong>响应示例</strong></p>
+                <blockquote>
+                    <p>JSON格式</p>
+                </blockquote>
+                <pre v-pre="" data-lang=""><code class="lang-">
+                {
+                    "BlockResult": {
+                        "number": "0x1b4", // 436
+                        "hash": "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331",
+                        "parentHash": "0x9646252be9520f6e71339a8df9c55e4d7619deeb018d2a3f2d21fc165dde5eb5",
+                        "nonce": "0xe04d296d2460cfb8472af2c5fd05b5a214109c25688d3704aed5484f9a7792f2",
+                        "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                        "logsBloom": "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331",
+                        "transactionsRoot": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+                        "stateRoot": "0xd5855eb08b3387c0af375e9cdb6acfc05eb8f519e419b874b6ff2ffda7ed1dff",
+                        "miner": "0x4e65fda2159562a496f9f3522f89122a3088497a",
+                        "difficulty": "0x027f07", // 163591
+                        "totalDifficulty":  "0x027f07", // 163591
+                        "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000",
+                        "size":  "0x027f07", // 163591
+                        "gasLimit": "0x9f759", // 653145
+                        "minGasPrice": "0x9f759", // 653145
+                        "gasUsed": "0x9f759", // 653145
+                        "timestamp": "0x54e34e8e" // 1424182926
+                        "transactions": [{...},{ ... }]
+                        "uncles": ["0x1606e5...", "0xd5145a9..."]
+                    }
+                }
+                </code></pre>
+
+
             </article>
         </div>
 
@@ -25,7 +198,7 @@
 
 <script>
     export default {
-        data: function(){
+        data: function () {
             return {}
         }
     }

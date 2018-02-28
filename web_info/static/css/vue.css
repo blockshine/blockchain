@@ -97,14 +97,18 @@
     border: 1px solid #ddd;
     padding: 6px 13px;
 }
+body.sticky .sidebar, body.sticky .sidebar-toggle {
+    position: fixed;
+}
 @media (max-width: 767px) {
     .content{
         background: none repeat scroll 0 0 #fff;
         position: absolute;
-        left: 30%;
+        left: 0;
         right: 0;
-        top: 70px;
+        top: 50px;
         padding: 4px 0px;
+        margin-bottom: 38px;
         bottom: 0;
         width: auto;
         box-sizing: border-box;
@@ -115,6 +119,12 @@
         font-size: 1.5rem;
         margin: 4px 0 9.6px;
         margin: 4px 0 .6rem;
+    }
+    .header .logo{
+        width: 100px!important;
+    }
+    .el-menu {
+        width: auto!important;
     }
     .el-submenu .el-menu{
         background-color: rgba(0,0,0,0)!important;
@@ -127,5 +137,34 @@
     .is-active{
         color: #20a0ff;
         background-color: rgba(0,0,0,0)!important;
+    }
+    .sidebar-toggle {
+        background-color: transparent;
+        width: auto;
+    }
+
+    .sidebar-toggle {
+        background-color: transparent;
+        background-color: hsla(0, 0%, 100%, .8);
+        border: 0;
+        outline: none;
+        padding: 10px;
+        bottom: 0;
+        left: 0;
+        position: fixed !important;
+        text-align: center;
+        -webkit-transition: opacity .3s;
+        transition: opacity .3s;
+        width: 30px;
+        width: 284px;
+        z-index: 4;
+    }
+    .sidebar-toggle span {
+        background-color: #42b983;
+        background-color: var(--theme-color, #42b983);
+        display: block;
+        margin-bottom: 4px;
+        width: 16px;
+        height: 2px;
     }
 }

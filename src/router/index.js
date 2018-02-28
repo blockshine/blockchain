@@ -22,6 +22,10 @@ export default new Router({
                     component: resolve => require(['../components/page/basicConcept.vue'], resolve)
                 },
                 {
+                    path: '/solution',
+                    component: resolve => require(['../components/page/proSolution.vue'], resolve)
+                },
+                {
                     path: '/reqInter',
                     component: resolve => require(['../components/page/reqInter.vue'], resolve)
                 },
@@ -93,6 +97,21 @@ export default new Router({
                     //区块数量
                    path:'/block_count',
                    component: resolve => require(['../components/page/block/block_count.vue'], resolve)
+                },
+                {
+                    //区块数量
+                   path:'/block_detail',
+                   component: resolve => require(['../components/page/block/block_detail.vue'], resolve)
+                },
+                {
+                    //区块数量
+                   path:'/block_page',
+                   component: resolve => require(['../components/page/block/block_page.vue'], resolve)
+                },
+                {
+                    //区块交易查询
+                   path:'/block_range',
+                   component: resolve => require(['../components/page/block/block_range.vue'], resolve)
                 },
                 {
                     //区块交易查询
