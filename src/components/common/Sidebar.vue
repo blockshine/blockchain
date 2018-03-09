@@ -78,12 +78,16 @@
                             
                             {
                                 index: '5',
-                                group:'准备',
-                                // title: '准备',
+                                group:'授权',
+                                // title: '授权',
                                 subs:[
                                     {
-                                        index:'reqInter',
-                                        title:'请求接口'
+                                        index:'tokenApply',
+                                        title:'请求授权'
+                                    },
+                                    {
+                                        index:'tokenRefresh',
+                                        title:'刷新授权'
                                     }
                                 ]
                             },

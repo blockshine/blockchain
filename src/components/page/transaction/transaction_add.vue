@@ -34,6 +34,8 @@
                 </blockquote>
                 <pre v-pre="" data-lang=""><code class="lang-">
                 {
+                    "code":"0",
+                    "msg": "操作成功",
                     "address":“0x544E45893fa0e26eE4c8B272FD59dc341ac35793”
                 }
                 </code></pre>
