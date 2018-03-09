@@ -3,7 +3,7 @@
         <div class="ms-doc">
             <article class="markdown-section" id="main">
 
-                <h3>发送交易</h3>
+                <h3>交易回执</h3>
                 <p><strong>请求语法</strong></p>
                 <pre v-pre="" data-lang=""><code class="lang-">GET /transaction/receipt</code></pre>
                 <p><strong>请求参数</strong></p>
