@@ -5,7 +5,7 @@
 
                 <h3>账户清单</h3>
                 <p><strong>请求语法</strong></p>
-                <pre v-pre="" data-lang=""><code class="lang-">GET /accounts</code></pre>
+                <pre v-pre="" data-lang=""><code class="lang-">GET /account/list</code></pre>
                 <p><strong>请求参数</strong></p>
                 <p>无</p>
                 <p><strong>响应参数</strong></p>
@@ -27,13 +27,15 @@
                     </tbody>
                 </table>
                 <p><strong>请求示例</strong></p>
-                <pre v-pre="" data-lang=""><code class="lang-">http://localhost:8090/accounts</code></pre>
+                <pre v-pre="" data-lang=""><code class="lang-">http://localhost:8090/account/list</code></pre>
                 <p><strong>响应示例</strong></p>
                 <blockquote>
                     <p>JSON格式</p>
                 </blockquote>
                 <pre v-pre="" data-lang=""><code class="lang-">
                 {
+                    "code":"0",
+                    "msg": "操作成功",
                     "accounts":[
                                     "0xf73e9086f0bfa3cc7f9ed49aadb522bed0cf7f1d",
                                     "0x53427da8220f6cf9f3f73bc130f00b5845985059"

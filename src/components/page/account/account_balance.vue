@@ -7,7 +7,29 @@
                 <p><strong>请求语法</strong></p>
                 <pre v-pre="" data-lang=""><code class="lang-">GET /account/balance</code></pre>
                 <p><strong>请求参数</strong></p>
-                <p>String address</p>
+
+                <table>
+                    <thead>
+                    <tr>
+                        <th id="参数">参数</th>
+                        <th id="类型">类型</th>
+                        <th id="传参类型">传参类型</th>
+                        <th id="必须">必须</th>
+                        <th id="说明">说明</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>address</td>
+                            <td>string</td>
+                            <td>body</td>
+                            <td>true</td>
+                            <td>地址</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
                 <p><strong>响应参数</strong></p>
                 <p>String balance</p>
                 <table>
@@ -34,6 +56,8 @@
                 </blockquote>
                 <pre v-pre="" data-lang=""><code class="lang-">
                 {
+                    "code":"0",
+                    "msg": "操作成功",
                     "balance":0
                 }
                 </code></pre>
