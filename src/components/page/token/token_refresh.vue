@@ -30,7 +30,6 @@
                     </table>
 
                 <p><strong>响应参数</strong></p>
-                <p>String address</p>
                 <table>
                     <thead>
                     <tr>
