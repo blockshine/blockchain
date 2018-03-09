@@ -5,9 +5,9 @@ webpackJsonp([0],{
 
 var Component = __webpack_require__(197)(
   /* script */
-  __webpack_require__(521),
+  __webpack_require__(539),
   /* template */
-  __webpack_require__(554),
+  __webpack_require__(610),
   /* scopeId */
   null,
   /* cssModules */
@@ -19,25 +19,11 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 520:
+/***/ 538:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -59,14 +45,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 521:
+/***/ 539:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Header_vue__ = __webpack_require__(551);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Header_vue__ = __webpack_require__(605);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Header_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Header_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Sidebar_vue__ = __webpack_require__(552);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Sidebar_vue__ = __webpack_require__(606);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Sidebar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Sidebar_vue__);
 //
 //
@@ -89,7 +75,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 522:
+/***/ 540:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -121,10 +107,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data() {
         return {
+            screenWidth: document.body.clientWidth,
+            timer: false,
+            isCollapse: true,
             items: [{
                 // icon: 'el-icon-menu',
                 index: '1',
@@ -141,17 +139,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 }, {
                     index: 'private_chain_solution',
                     title: '私有链解决方案'
+                }, {
+                    index: 'solution',
+                    title: '行业解决方案'
                 }]
-            }, {
-                // icon: 'el-icon-setting',
-                index: '',
-                title: '快速入门'
             }, {
                 // icon: 'el-icon-menu',
                 index: '3',
-                title: 'API参考',
+                title: '公链API参考',
                 subs: [{
-                    index: '4',
+                    index: '5',
                     group: '准备',
                     // title: '准备',
                     subs: [{
@@ -159,34 +156,72 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                         title: '请求接口'
                     }]
                 }, {
-                    index: '5',
-                    group: '服务器',
-                    subs: [{
-                        index: '5-1',
-                        title: '获取服务器心跳'
-                    }, {
-                        index: '5-2',
-                        title: '获取服务器心态'
-                    }]
-                }, {
                     index: '6',
-                    group: '账号',
+                    group: '合约',
                     subs: [{
-                        index: 'account_add',
-                        title: '创建账户'
+                        index: 'complieContract',
+                        title: '编译验证合约'
                     }, {
-                        index: '',
-                        title: '通过地址获取账户信息'
+                        index: 'deployContract',
+                        title: '部署合约'
+                    }, {
+                        index: 'invokeContract',
+                        title: '调用合约'
+                    }, {
+                        index: 'getContractStatus',
+                        title: '查询合约状态'
                     }]
                 }, {
                     index: '7',
-                    group: '区块链',
+                    group: '账户',
                     subs: [{
-                        index: '',
-                        title: '发起一笔转账交易'
+                        index: 'account_add',
+                        title: '账户创建'
                     }, {
-                        index: '',
-                        title: '获取跟命名空间'
+                        index: 'account_list',
+                        title: '账户集合'
+                    }, {
+                        index: 'account_balance',
+                        title: '账户余额'
+                    }]
+                }, {
+
+                    index: '8',
+                    group: '区块',
+                    subs: [{
+                        index: 'block_detail',
+                        title: '区块详情'
+                    }, {
+                        index: 'block_page',
+                        title: '区块分页'
+                    }, {
+                        index: 'block_range',
+                        title: '查询指定范围内的区块列表'
+                    }, {
+                        index: 'block_count',
+                        title: '区块总数'
+                    }]
+                }, {
+                    index: '9',
+                    group: '交易',
+                    subs: [{
+                        index: 'transaction_count',
+                        title: '查询交易总数'
+                    }, {
+                        index: 'transaction_receipt',
+                        title: '查询交易回执'
+                    }, {
+                        index: 'transaction_detail',
+                        title: '查询交易详情'
+                    }, {
+                        index: 'transaction_discard',
+                        title: '查询指定时区间内的非法交易'
+                    }, {
+                        index: 'transaction_add',
+                        title: '新增交易'
+                    }, {
+                        index: 'transaction_batch',
+                        title: '批量交易'
                     }]
                 }]
             }, {
@@ -196,16 +231,54 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }]
         };
     },
+    mounted() {
+        const that = this;
+        if (parseInt(that.screenWidth) <= 768) {
+            that.isCollapse = false;
+        } else {
+            that.isCollapse = true;
+        }
+        window.onresize = () => {
+            return (() => {
+                window.screenWidth = document.body.clientWidth;
+                that.screenWidth = window.screenWidth;
+            })();
+        };
+    },
+    methods: {
+        toggleList() {
+            this.isCollapse = !this.isCollapse;
+        }
+    },
     computed: {
         onRoutes() {
+            //this.isCollapse=!this.isCollapse;
             return this.$route.path.replace('/', '');
+        }
+    },
+    watch: {
+        screenWidth(val) {
+            if (!this.timer) {
+                this.screenWidth = val;
+                this.timer = true;
+                let that = this;
+                setTimeout(function () {
+                    // that.screenWidth = that.$store.state.canvasWidth
+                    if (parseInt(that.screenWidth) <= 768) {
+                        that.isCollapse = false;
+                    } else {
+                        that.isCollapse = true;
+                    }
+                    that.timer = false;
+                }, 400);
+            }
         }
     }
 });
 
 /***/ }),
 
-/***/ 539:
+/***/ 578:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(64)(false);
@@ -213,14 +286,14 @@ exports = module.exports = __webpack_require__(64)(false);
 
 
 // module
-exports.push([module.i, ".sidebar[data-v-2b29b166]{display:block;position:absolute;width:250px;left:0;top:70px;bottom:0;background:#fff}.sidebar>ul[data-v-2b29b166]{height:100%}@media (max-width:767px){.sidebar[data-v-2b29b166][data-v-2b29b166]{display:block;position:relative;width:30%;left:0;top:0;bottom:0;background:#eef1f6;verflow-y:auto;height:100%;font-size:10px;overflow-x:scroll}.el-submenu .el-menu[data-v-2b29b166]{background-color:transparent}}", ""]);
+exports.push([module.i, ".sidebar[data-v-2b29b166]{display:block;position:absolute;width:250px;left:0;top:70px;bottom:0;z-index:3;overflow:scroll}.sidebar>ul[data-v-2b29b166]{height:100%}@media (max-width:767px){.sidebardiv[data-v-2b29b166]{height:100%}.sidebar[data-v-2b29b166]{display:block;position:relative;left:0;top:0;bottom:0;verflow-y:auto;height:100%;font-size:10px;overflow-x:scroll;z-index:2}.el-submenu .el-menu-item[data-v-2b29b166]{height:50px;line-height:50px;padding:0 25px}}", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 545:
+/***/ 590:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(64)(false);
@@ -228,25 +301,25 @@ exports = module.exports = __webpack_require__(64)(false);
 
 
 // module
-exports.push([module.i, ".header[data-v-67788ef3]{position:relative;box-sizing:border-box;width:100%;height:70px;font-size:22px;line-height:70px;color:#fff}.header .logo[data-v-67788ef3]{float:left;width:250px;text-align:center}.sel-info[data-v-67788ef3]{float:right;padding-right:50px;font-size:16px;color:#fff;border:0}", ""]);
+exports.push([module.i, ".header[data-v-67788ef3]{position:relative;box-sizing:border-box;width:100%;height:70px;font-size:22px;line-height:70px;color:#fff}.header .logo[data-v-67788ef3]{float:left;width:250px;text-align:center}.sel-info[data-v-67788ef3]{float:right;padding-right:50px;font-size:16px;color:#fff;border:0}@media (max-width:767px){.header[data-v-67788ef3]{height:50px;line-height:50px}}", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 551:
+/***/ 605:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(578)
+__webpack_require__(659)
 
 var Component = __webpack_require__(197)(
   /* script */
-  __webpack_require__(520),
+  __webpack_require__(538),
   /* template */
-  __webpack_require__(563),
+  __webpack_require__(626),
   /* scopeId */
   "data-v-67788ef3",
   /* cssModules */
@@ -258,18 +331,18 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 552:
+/***/ 606:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(572)
+__webpack_require__(647)
 
 var Component = __webpack_require__(197)(
   /* script */
-  __webpack_require__(522),
+  __webpack_require__(540),
   /* template */
-  __webpack_require__(557),
+  __webpack_require__(614),
   /* scopeId */
   "data-v-2b29b166",
   /* cssModules */
@@ -281,7 +354,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 554:
+/***/ 610:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -299,11 +372,19 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ }),
 
-/***/ 557:
+/***/ 614:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
+    staticClass: "sidebardiv"
+  }, [_c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.isCollapse),
+      expression: "isCollapse"
+    }],
     staticClass: "sidebar"
   }, [_c('el-menu', {
     staticClass: "el-menu-vertical-demo",
@@ -341,20 +422,27 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         attrs: {
           "index": subItem.index
         }
-      }, [_vm._v(_vm._s(subItem.title) + "\n                        ")])]
+      }, [_vm._v(_vm._s(subItem.title) + "\n                            ")])]
     })], 2)] : [_c('el-menu-item', {
       attrs: {
         "index": item.index
       }
     }, [_c('i', {
       class: item.icon
-    }), _vm._v(_vm._s(item.title) + "\n                ")])]]
-  })], 2)], 1)
+    }), _vm._v(_vm._s(item.title) + "\n                    ")])]]
+  })], 2)], 1), _vm._v(" "), _c('button', {
+    staticClass: "sidebar-toggle",
+    on: {
+      "click": _vm.toggleList
+    }
+  }, [_c('el-col', {
+    staticClass: "sidebar-toggle-button"
+  }, [_c('span'), _vm._v(" "), _c('span'), _vm._v(" "), _c('span')])], 1)])
 },staticRenderFns: []}
 
 /***/ }),
 
-/***/ 563:
+/***/ 626:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -371,31 +459,31 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ }),
 
-/***/ 572:
+/***/ 647:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(539);
+var content = __webpack_require__(578);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(198)("7766e1bc", content, true);
+var update = __webpack_require__(198)("92a2bc58", content, true);
 
 /***/ }),
 
-/***/ 578:
+/***/ 659:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(545);
+var content = __webpack_require__(590);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(198)("31d1ee0e", content, true);
+var update = __webpack_require__(198)("5f4e32cd", content, true);
 
 /***/ })
 
