@@ -3,43 +3,33 @@
         <div class="ms-doc">
             <article class="markdown-section" id="main">
 
-                <h3>授权码申请</h3>
+                <h3>授权码刷新</h3>
                 <p><strong>请求语法</strong></p>
-                <pre v-pre="" data-lang=""><code class="lang-">POST /token/apply</code></pre>
+                <pre v-pre="" data-lang=""><code class="lang-">POST /token/refresh</code></pre>
                 <p><strong>请求参数</strong></p>
-
-                <table>
-                    <thead>
-                    <tr>
-                        <th id="参数">参数</th>
-                        <th id="类型">类型</th>
-                        <th id="传参类型">传参类型</th>
-                        <th id="必须">必须</th>
-                        <th id="说明">说明</th>
-                    </tr>
-                    </thead>
-
-                    <tbody>
+                    <table>
+                        <thead>
                         <tr>
-                            <td>appKey</td>
-                            <td>string</td>
-                            <td>body</td>
-                            <td>true</td>
-                            <td>授权码申请Key</td>
+                            <th id="参数">参数</th>
+                            <th id="类型">类型</th>
+                            <th id="传参类型">传参类型</th>
+                            <th id="必须">必须</th>
+                            <th id="说明">说明</th>
                         </tr>
-                        <tr>
-                            <td>appSecret</td>
-                            <td>string</td>
-                            <td>body</td>
-                            <td>true</td>
-                            <td>授权码申请密码</td>
-                        </tr>
+                        </thead>
 
-                    </tbody>
-                </table>
+                        <tbody>
+                            <tr>
+                                <td>refreshToken</td>
+                                <td>string</td>
+                                <td>body</td>
+                                <td>true</td>
+                                <td>刷新授权码凭证</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                 <p><strong>响应参数</strong></p>
-
                 <table>
                     <thead>
                     <tr>
@@ -80,18 +70,14 @@
 
                 </table>
                 <p><strong>请求示例</strong></p>
-                <pre v-pre="" data-lang=""><code class="lang-">localhost:8090/token/apply</code></pre>
+                <pre v-pre="" data-lang=""><code class="lang-">localhost:8090/token/refresh</code></pre>
                 <pre v-pre="" data-lang="">
-                <code class="lang-">
-                {
-                 "appKey":"13",
-                 "appSecret":"ASDF"
-                }
-                </code>
+                    <code class="lang-">
+                    {"refreshToken": "a3af6455864edc545fa2d57e85ee46db"}
+                    </code>
                 </pre>
 
                 <p><strong>响应示例</strong></p>
-
                 <blockquote>
                     <p>JSON格式</p>
                 </blockquote>
