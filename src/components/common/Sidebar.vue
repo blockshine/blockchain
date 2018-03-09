@@ -169,19 +169,21 @@
                                     {
                                         index:'transaction_detail',
                                         title:'查询交易详情'
-                                    },
-                                     {
-                                         index:'transaction_discard',
-                                         title:'查询指定时区间内的非法交易'
-                                     },
-                                    {
-                                         index:'transaction_add',
-                                         title:'新增交易'
-                                     },
-                                     {
-                                          index:'transaction_batch',
-                                          title:'批量交易'
-                                      }
+                                    }
+
+                                    //,
+                                     //{
+                                       //  index:'transaction_discard',
+                                         //title:'查询指定时区间内的非法交易'
+                                     //},
+                                    //{
+                                     //    index:'transaction_add',
+                                       //  title:'新增交易'
+                                     //},
+                                     //{
+                                       //   index:'transaction_batch',
+                                         // title:'批量交易'
+                                      //}
                                 ]
                             },
                             {

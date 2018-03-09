@@ -62,11 +62,11 @@
                     <p>JSON格式</p>
                 </blockquote>
                 <pre v-pre="" data-lang=""><code class="lang-">
-                {
-                    "code":"0",
-                    "msg": "操作成功",
-                    "balance":0
-                }
+                    {
+                        "code":"0",
+                        "msg": "操作成功",
+                        "balance":0
+                    }
                 </code></pre>
 
             </article>
