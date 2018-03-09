@@ -40,28 +40,34 @@
                     </thead>
 
                     <tbody>
+                         <tr>
+                            <td style="text-align:left">tokenObject</td>
+                            <td style="text-align:left">Array</td>
+                            <td style="text-align:left">token对象实体</td>
+                        </tr>
+
                         <tr>
-                            <td style="text-align:left">scope</td>
+                            <td style="text-align:left">|scope</td>
                             <td style="text-align:left">String</td>
                             <td style="text-align:left">授权码使用范围</td>
                         </tr>
                         <tr>
-                            <td style="text-align:left">tokenType</td>
+                            <td style="text-align:left">|tokenType</td>
                             <td style="text-align:left">String</td>
                             <td style="text-align:left">授权码类型</td>
                         </tr>
                         <tr>
-                            <td style="text-align:left">expiryTime</td>
+                            <td style="text-align:left">|expiryTime</td>
                             <td style="text-align:left">Int</td>
                             <td style="text-align:left">终止时间(秒数)</td>
                         </tr>
                         <tr>
-                            <td style="text-align:left">refreshToken</td>
+                            <td style="text-align:left">|refreshToken</td>
                             <td style="text-align:left">String</td>
                             <td style="text-align:left">刷新授权码凭证</td>
                         </tr>
                         <tr>
-                            <td style="text-align:left">token</td>
+                            <td style="text-align:left">|token</td>
                             <td style="text-align:left">String</td>
                             <td style="text-align:left">接口访问凭证</td>
                         </tr>

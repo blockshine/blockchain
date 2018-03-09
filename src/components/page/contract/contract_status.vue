@@ -3,7 +3,7 @@
         <div class="ms-doc">
             <article class="markdown-section" id="main">
 
-                <h3>合约状态查询</h3>
+                <h3>合约状态查询(暂未开放)</h3>
                 <p><strong>请求语法</strong></p>
                 <pre v-pre="" data-lang=""><code class="lang-">GET /contract/status</code></pre>
                 <p><strong>请求参数</strong></p>

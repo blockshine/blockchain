@@ -3,7 +3,7 @@
         <div class="ms-doc">
             <article class="markdown-section" id="main">
 
-                <h3>合约编译验证</h3>
+                <h3>合约编译验证(暂未开放)</h3>
                 <p><strong>请求语法</strong></p>
                 <pre v-pre="" data-lang=""><code class="lang-">GET /contract/compile</code></pre>
 

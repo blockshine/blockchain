@@ -169,7 +169,9 @@
                                     {
                                         index:'transaction_detail',
                                         title:'查询交易详情'
-                                    },
+                                    }
+
+                                    ,
                                      {
                                          index:'transaction_discard',
                                          title:'查询指定时区间内的非法交易'

@@ -31,7 +31,6 @@
 
 
                 <p><strong>响应参数</strong></p>
-                <p>String[] accounts</p>
                 <table>
                     <thead>
                     <tr>
@@ -43,7 +42,7 @@
                     <tbody>
                     <tr>
                         <td style="text-align:left">accounts</td>
-                        <td style="text-align:left">String[]</td>
+                        <td style="text-align:left">Array</td>
                         <td style="text-align:left">返回本客户端包含的所有账户地址</td>
                     </tr>
                     </tbody>

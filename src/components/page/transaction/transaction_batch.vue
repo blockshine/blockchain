@@ -3,9 +3,9 @@
         <div class="ms-doc">
             <article class="markdown-section" id="main">
 
-                <h3>发送交易</h3>
+                <h3>批量交易(暂未开放)</h3>
                 <p><strong>请求语法</strong></p>
-                <pre v-pre="" data-lang=""><code class="lang-">GET /account/create</code></pre>
+                <pre v-pre="" data-lang=""><code class="lang-">GET /transaction/create</code></pre>
                 <p><strong>请求参数</strong></p>
                 <p>String name String secret</p>
                 <p><strong>响应参数</strong></p>
@@ -27,7 +27,7 @@
                     </tbody>
                 </table>
                 <p><strong>请求示例</strong></p>
-                <pre v-pre="" data-lang=""><code class="lang-">localhost:8090/account/create?name=Bob&secret=123</code></pre>
+                <pre v-pre="" data-lang=""><code class="lang-">localhost:8090/transaction/create?name=Bob&secret=123</code></pre>
                 <p><strong>响应示例</strong></p>
                 <blockquote>
                     <p>JSON格式</p>
