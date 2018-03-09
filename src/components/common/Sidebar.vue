@@ -183,7 +183,19 @@
                                           title:'批量交易'
                                       }
                                 ]
+                            },
+                            {
+                                index:'10',
+                                    group:'错误码说明',
+                                    subs:[
+                                        {
+                                            index:'code_desc',
+                                            title:'错误码说明'
+                                        },
+                                    ]
                             }
+
+
                         ]
                     },
                      {

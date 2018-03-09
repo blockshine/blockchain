@@ -20,6 +20,13 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td>token</td>
+                            <td>string</td>
+                            <td>HEAD</td>
+                            <td>true</td>
+                            <td>授权码</td>
+                        </tr>
+                        <tr>
                             <td>address</td>
                             <td>string</td>
                             <td>body</td>

@@ -154,6 +154,10 @@ export default new Router({
                 {
                     path: '/getContractStatus',
                     component: resolve => require(['../components/page/contract/contract_status.vue'], resolve)
+                },
+                {
+                    path: '/code_desc',
+                    component: resolve => require(['../components/page/code/code_desc.vue'], resolve)
                 }
             ]
         }
