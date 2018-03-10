@@ -40,7 +40,12 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td style="text-align:left">blockNumber</td>
+                        <td style="text-align:left">chainData</td>
+                        <td style="text-align:left">Array</td>
+                        <td style="text-align:left">链数据结构</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left">|blockNumber</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">返回区块数量</td>
                     </tr>
@@ -54,9 +59,15 @@
                     <p>JSON格式</p>
                 </blockquote>
                 <pre v-pre="" data-lang=""><code class="lang-">
-                {
-                    "blockNumber":"0"
-                }
+
+                     {
+                        "msg": "操作成功",
+                        "code": 0,
+                        "chainData": {
+                                    "blockNumber":"0"
+                            }
+                    }
+
                 </code></pre>
 
             </article>
