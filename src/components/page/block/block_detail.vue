@@ -50,7 +50,6 @@
 
                 </p>
                 <p><strong>响应参数</strong></p>
-                <p>
                     <table>
                     <thead>
                     <tr>
@@ -180,7 +179,6 @@
                     </tbody>
                     </table>
 
-                </p>
                 <p><strong>请求示例</strong></p>
                 <pre v-pre="" data-lang=""><code class="lang-">http://localhost:8090/block/info?bnOrId=0x1942&fullTransactionObjects=true</code></pre>
                 <p><strong>响应示例</strong></p>
