@@ -34,6 +34,8 @@
                 </blockquote>
                 <pre v-pre="" data-lang=""><code class="lang-">
                 {
+                    "code":"0",
+                    "msg": "操作成功",
                     "blockNumber":"0"
                 }
                 </code></pre>

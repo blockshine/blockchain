@@ -60,14 +60,13 @@
 
                     </tr>
                     </thead>
-                    <thead>
-                    <tr>
-                        <th style="text-align:left" >chainData</th>
-                        <th style="text-align:left" >Array</th>
-                        <th style="text-align:left" >链数据结构</th>
-                    </tr>
-                    </thead>
                     <tbody>
+
+                    <tr>
+                        <td style="text-align:left" >chainData</td>
+                        <td style="text-align:left" >Array</td>
+                        <td style="text-align:left" >链数据结构</td>
+                    </tr>
 
                     <tr>
                     <td style="text-align:left">|number</td>
