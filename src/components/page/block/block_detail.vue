@@ -7,9 +7,47 @@
                 <p><strong>请求语法</strong></p>
                 <pre v-pre="" data-lang=""><code class="lang-">GET /block/info</code></pre>
                 <p><strong>请求参数</strong></p>
+
+
+
+                <table>
+                    <thead>
+                    <tr>
+                        <th id="参数">参数</th>
+                        <th id="类型">类型</th>
+                        <th id="传参类型">传参类型</th>
+                        <th id="必须">必须</th>
+                        <th id="说明">说明</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <td>token</td>
+                        <td>string</td>
+                        <td>HEAD</td>
+                        <td>true</td>
+                        <td>授权码</td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>string</td>
+                        <td>body</td>
+                        <td>true</td>
+                        <td>区块编号</td>
+                    </tr>
+                    <tr>
+                        <td>fullTransactionObjects</td>
+                        <td>Boolean</td>
+                        <td>body</td>
+                        <td>true</td>
+                        <td>如果为真，则返回完整的事务对象，如果仅为假，则返回事务的散列值。</td>
+                    </tr>
+
+                    </tbody>
+                </table>
                 <p>
-                String bnOrId : 区块编号, <br/>
-                Boolean fullTransactionObjects : 如果为真，则返回完整的事务对象，如果仅为假，则返回事务的散列值。
+
                 </p>
                 <p><strong>响应参数</strong></p>
                 <p>
@@ -17,6 +55,8 @@
                     <thead>
                     <tr>
                     <th style="text-align:left" >BlockResult</th>
+                    <th style="text-align:left" ></th>
+                    <th style="text-align:left" ></th>
                     </tr>
                     </thead>
                     <thead>
