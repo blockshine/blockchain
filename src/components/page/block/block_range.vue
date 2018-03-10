@@ -58,120 +58,122 @@
 
 
 
-
-
-
-
                     <tr>
-                        <td style="text-align:left">logsBloom</td>
+                        <th style="text-align:left" >chainData</th>
+                        <th style="text-align:left" >Array</th>
+                        <th style="text-align:left" >链数据结构</th>
+                    </tr>
+                    
+                    <tr>
+                        <td style="text-align:left">|logsBloom</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">DATA, 256 Bytes - the bloom filter for the logs of the block. null when its pending block.</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">receiptsRoot</td>
+                        <td style="text-align:left">|receiptsRoot</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">DATA, 32 Bytes - the root of the receipts trie of the block.</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">unclesHash</td>
+                        <td style="text-align:left">|unclesHash</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">Array - Array of uncle hashes.</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">extraData</td>
+                        <td style="text-align:left">|extraData</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left"> DATA - the "extra data" field of this block.</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">txTrieRoot</td>
+                        <td style="text-align:left">|txTrieRoot</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">DATA, 32 Bytes - the root of the transaction trie of the block.</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">nonce</td>
+                        <td style="text-align:left">|nonce</td>
                         <td style="text-align:left">string</td>
                         <td style="text-align:left">DATA, 8 Bytes - hash of the generated proof-of-work. null when its pending block.</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">difficultyBI</td>
+                        <td style="text-align:left">|difficultyBI</td>
                         <td style="text-align:left">String</td>
-                        <td style="text-align:left">返回区块数量</td>
+                        <td style="text-align:left">integer of the difficulty for all block</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">difficulty</td>
+                        <td style="text-align:left">|difficulty</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">QUANTITY - integer of the difficulty for this block.</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">number</td>
+                        <td style="text-align:left">|number</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">区块编号</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">gasLimit</td>
+                        <td style="text-align:left">|gasLimit</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">交易费的限制</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">genesis</td>
+                        <td style="text-align:left">|genesis</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">true</td>
                     </tr>
 
                     <tr>
-                        <td style="text-align:left">gasUsed</td>
+                        <td style="text-align:left">|gasUsed</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">gas消耗值总和</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">coinbase</td>
+                        <td style="text-align:left">|coinbase</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">矿工的账</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">shortDescr</td>
+                        <td style="text-align:left">|shortDescr</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">描述</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">stateRoot</td>
+                        <td style="text-align:left">|stateRoot</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">DATA, 32 Bytes - the root of the final state trie of the block.</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">powBoundary</td>
+                        <td style="text-align:left">|powBoundary</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">共识</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">mixHash</td>
+                        <td style="text-align:left">|mixHash</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">与nonce配合用于挖矿，由上一个区块的一部分生成的hash。</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">parentHash</td>
+                        <td style="text-align:left">|parentHash</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">上一个区块的hash值，因为是创世块，所以这个值是0</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">hash</td>
+                        <td style="text-align:left">|hash</td>
                         <td style="text-align:left">String</td>
-                        <td style="text-align:left">返回区块数量</td>
+                        <td style="text-align:left">区块的hash值</td>
                     </tr>
 
 
                     <tr>
-                        <td style="text-align:left">timestamp</td>
+                        <td style="text-align:left">|timestamp</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">QUANTITY - the unix timestamp for when the block was collated.</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">encoded</td>
+                        <td style="text-align:left">|encoded</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">编码</td>
                     </tr>
                     <tr>
-                        <td style="text-align:left">encodedWithoutNonce</td>
+                        <td style="text-align:left">|encodedWithoutNonce</td>
                         <td style="text-align:left">String</td>
                         <td style="text-align:left">没有Nonce的编码</td>
                     </tr>
