@@ -3,7 +3,7 @@
         <div class="ms-doc">
             <article class="markdown-section" id="main">
 
-                <h3>区块数量</h3>
+                <h3>区块分页</h3>
                 <p><strong>请求语法</strong></p>
                 <pre v-pre="" data-lang=""><code class="lang-">GET /block/number</code></pre>
                 <p><strong>请求参数</strong></p>
