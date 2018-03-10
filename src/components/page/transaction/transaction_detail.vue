@@ -124,7 +124,7 @@
 
 
                 <p><strong>请求示例</strong></p>
-                <pre v-pre="" data-lang=""><code class="lang-">localhost:8090/transaction/create?name=Bob&secret=123</code></pre>
+                <pre v-pre="" data-lang=""><code class="lang-">localhost:8090/transaction/info?name=Bob&secret=123</code></pre>
                 <p><strong>响应示例</strong></p>
                 <blockquote>
                     <p>JSON格式</p>
