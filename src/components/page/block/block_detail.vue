@@ -181,22 +181,6 @@
                     </table>
 
                 </p>
-                <table>
-                    <thead>
-                    <tr>
-                        <th style="text-align:left">参数</th>
-                        <th style="text-align:left">类型</th>
-                        <th style="text-align:left">说明</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td style="text-align:left">BlockResult</td>
-                        <td style="text-align:left">BlockResult</td>
-                        <td style="text-align:left">返回区块的基本信息</td>
-                    </tr>
-                    </tbody>
-                </table>
                 <p><strong>请求示例</strong></p>
                 <pre v-pre="" data-lang=""><code class="lang-">http://localhost:8090/block/info?bnOrId=0x1942&fullTransactionObjects=true</code></pre>
                 <p><strong>响应示例</strong></p>
