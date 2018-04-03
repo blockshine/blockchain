@@ -158,6 +158,14 @@ export default new Router({
                 {
                     path: '/code_desc',
                     component: resolve => require(['../components/page/code/code_desc.vue'], resolve)
+                },
+                {
+                    path: '/data_read',
+                    component: resolve => require(['../components/page/data/data_read.vue'], resolve)
+                },
+                {
+                    path: '/data_write',
+                    component: resolve => require(['../components/page/data/data_write.vue'], resolve)
                 }
             ]
         }

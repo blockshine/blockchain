@@ -1,3 +1,4 @@
+<!--suppress ALL -->
 <template>
     <div  class="sidebardiv" >
         <div  class="sidebar" v-show="isCollapse">
@@ -60,12 +61,12 @@
                                 title:'公有链解决方案'
                             },
                             {
-                               index:'private_chain_solution',
-                               title:'私有链解决方案'
+                                index:'private_chain_solution',
+                                title:'私有链解决方案'
                             },
                             {
-                               index:'solution',
-                               title:'行业解决方案'
+                                index:'solution',
+                                title:'行业解决方案'
                             }
                         ]
                     },
@@ -75,7 +76,7 @@
                         index: '3',
                         title: '公链API参考',
                         subs: [
-                            
+
                             {
                                 index: '5',
                                 group:'授权',
@@ -172,39 +173,53 @@
                                     }
 
                                     ,
-                                     {
-                                         index:'transaction_discard',
-                                         title:'查询指定时区间内的非法交易'
-                                     },
                                     {
-                                         index:'transaction_add',
-                                         title:'新增交易'
-                                     },
-                                     {
-                                          index:'transaction_batch',
-                                          title:'批量交易'
-                                      }
+                                        index:'transaction_discard',
+                                        title:'查询指定时区间内的非法交易'
+                                    },
+                                    {
+                                        index:'transaction_add',
+                                        title:'新增交易'
+                                    },
+                                    {
+                                        index:'transaction_batch',
+                                        title:'批量交易'
+                                    }
                                 ]
                             },
                             {
                                 index:'10',
-                                    group:'错误码说明',
-                                    subs:[
-                                        {
-                                            index:'code_desc',
-                                            title:'错误码说明'
-                                        },
-                                    ]
+                                group:'数据',
+                                subs:[
+                                    {
+                                        index:'data_write',
+                                        title:'数据写入链中'
+                                    },
+                                    {
+                                        index:'data_read',
+                                        title:'查询链中数据'
+                                    }
+                                ]
+                            },
+                            {
+                                index:'11',
+                                group:'错误码说明',
+                                subs:[
+                                    {
+                                        index:'code_desc',
+                                        title:'错误码说明'
+                                    },
+                                ]
                             }
 
 
                         ]
                     },
-                     {
-                     // icon: 'el-icon-menu',
-                      index: 'log-history',
-                      title: '更新日志'
-                     }
+                    {
+                        // icon: 'el-icon-menu',
+                        index: 'log-history',
+                        title: '更新日志'
+                    }
                 ]
             }
         },
@@ -219,8 +234,8 @@
             window.onresize = () => {
                 return (() => {
                     window.screenWidth = document.body.clientWidth
-                    that.screenWidth = window.screenWidth
-                })()
+                that.screenWidth = window.screenWidth
+            })()
             }
         },
         methods:{
@@ -264,7 +279,7 @@
         left: 0;
         top: 70px;
         bottom:0;
-       /* background: #fff;*/
+        /* background: #fff;*/
         z-index: 3;
         overflow: scroll;
     }
@@ -296,3 +311,4 @@
         }
     }
 </style>
+
