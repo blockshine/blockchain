@@ -74,7 +74,20 @@
                 </table>
 
                 <p><strong>请求示例</strong></p>
-                <pre v-pre="" data-lang=""><code class="lang-">localhost:8090/data/write?data=test</code></pre>
+                <pre v-pre="" data-lang=""><code class="lang-">localhost:8090/data/write</code></pre>
+
+                <p><strong>请求示例</strong></p>
+                <blockquote>
+                    <p>JSON格式</p>
+                </blockquote>
+                <pre v-pre="" data-lang=""><code class="lang-">
+                {
+                    "data": "0x13445......fcae7"
+
+                }
+
+                </code></pre>
+
                 <p><strong>响应示例</strong></p>
                 <blockquote>
                     <p>JSON格式</p>

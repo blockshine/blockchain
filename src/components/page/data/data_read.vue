@@ -74,7 +74,23 @@
                 </table>
 
                 <p><strong>请求示例</strong></p>
-                <pre v-pre="" data-lang=""><code class="lang-">localhost:8090/data/read?receipt=0x13445......fcae7</code></pre>
+                <pre v-pre="" data-lang=""><code class="lang-">localhost:8090/data/read</code></pre>
+
+                <p><strong>请求示例</strong></p>
+                <blockquote>
+                    <p>JSON格式</p>
+                </blockquote>
+                <pre v-pre="" data-lang=""><code class="lang-">
+                {
+                    "receipt": "0x13445......fcae7"
+
+                }
+
+                </code></pre>
+
+
+
+
                 <p><strong>响应示例</strong></p>
                 <blockquote>
                     <p>JSON格式</p>
