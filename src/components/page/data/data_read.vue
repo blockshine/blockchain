@@ -50,7 +50,7 @@
                     <tbody>
                     <tr>
                         <td style="text-align:left">chainData</td>
-                        <td style="text-align:left">Array</td>
+                        <td style="text-align:left">Object</td>
                         <td style="text-align:left">区块链响应数据</td>
                     </tr>
 

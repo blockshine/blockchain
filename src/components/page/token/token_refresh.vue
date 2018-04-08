@@ -42,7 +42,7 @@
                     <tbody>
                          <tr>
                             <td style="text-align:left">tokenObject</td>
-                            <td style="text-align:left">Array</td>
+                            <td style="text-align:left">Object</td>
                             <td style="text-align:left">token对象实体</td>
                         </tr>
 

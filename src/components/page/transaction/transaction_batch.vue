@@ -30,14 +30,14 @@
                         </tr>
                         <tr>
                             <td>to</td>
-                            <td>Array</td>
+                            <td>String</td>
                             <td>body</td>
                             <td>true</td>
                             <td>接收地址</td>
                         </tr>
                         <tr>
                             <td>amount</td>
-                            <td>Array</td>
+                            <td>String</td>
                             <td>body</td>
                             <td>true</td>
                             <td>金额</td>
