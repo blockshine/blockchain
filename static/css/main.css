@@ -126,7 +126,7 @@ a{text-decoration: none}
 }
 
 .one.is-active .el-submenu__title{
-    font-weight: 800;
+    /*font-weight: 800; */
     color: #53b9a7;
     /*font-size: large;*/
 }
