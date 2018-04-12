@@ -49,16 +49,13 @@
 
                 <p><strong>请求示例</strong></p>
                 <pre v-pre="" data-lang=""><code class="lang-">localhost:8090/transaction/send</code></pre>
-
                 <pre v-pre="" data-lang="">
                     <code class="lang-">
-
                         {
                             "to":"0x544E45893fa0e26eE4c8B272FD59dc341ac35793",
                             "amount":"1234500"
                         }
-                    </code>
-                </pre>
+                    </code></pre>
                 <p><strong>响应示例</strong></p>
                 <blockquote>
                     <p>JSON格式</p>

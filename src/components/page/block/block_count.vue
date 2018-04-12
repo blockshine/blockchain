@@ -59,7 +59,6 @@
                     <p>JSON格式</p>
                 </blockquote>
                 <pre v-pre="" data-lang=""><code class="lang-">
-
                      {
                         "msg": "操作成功",
                         "code": 0,
@@ -67,7 +66,6 @@
                                     "blockNumber":"0"
                             }
                     }
-
                 </code></pre>
 
             </article>

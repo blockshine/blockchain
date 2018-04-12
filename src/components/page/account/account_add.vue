@@ -64,26 +64,20 @@
                 </table>
                 <p><strong>请求示例</strong></p>
                 <pre v-pre="" data-lang=""><code class="lang-">localhost:8090/account/create</code></pre>
-                <pre v-pre="" data-lang="">
-                    <code class="lang-">
-                    {
-                         "name":"Bob",
-                         "secret":"123"
-                    }
-                    </code>
-                </pre>
+                <pre v-pre="" data-lang=""><code class="lang-">               {
+                      "name":"Bob",
+                      "secret":"123"
+                    }</code></pre>
 
                 <p><strong>响应示例</strong></p>
                 <blockquote>
                     <p>JSON格式</p>
                 </blockquote>
-                <pre v-pre="" data-lang=""><code class="lang-">
-                {
-                    "code":"0",
-                    "msg": "操作成功",
-                    "address":“0x544E45893fa0e26eE4c8B272FD59dc341ac35793”
-                }
-                </code></pre>
+                <pre v-pre="" data-lang=""><code class="lang-">               {
+                      "code":"0",
+                      "msg": "操作成功",
+                      "address":“0x544E45893fa0e26eE4c8B272FD59dc341ac35793”
+                    }</code></pre>
 
             </article>
         </div>

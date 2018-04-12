@@ -1,14 +1,16 @@
 <!--suppress ALL -->
 <template>
-    <div  class="sidebardiv" >
-        <div  class="sidebar" v-show="isCollapse">
-            <el-menu :default-active="onRoutes" class="el-menu-vertical-demo"  unique-opened router>
+    <div>
+        <div  class="sidebardiv" v-show="isCollapse">
+        <div  class="sidebar" >
+            <el-menu :default-active="onRoutes" class="el-menu-vertical-demo" collapse="true"  router>
+                <!-- unique-opened-->
                 <template v-for="item in items">
                     <template v-if="item.subs">
-                        <el-submenu :index="item.index">
+                        <el-submenu :index="item.index" class="one" >
                             <template slot="title"><i :class="item.icon"></i>{{ item.title }}</template>
                             <template v-for="subItem in item.subs" >
-                                <el-submenu :index="subItem.index" v-if="subItem.group">
+                                <el-submenu :index="subItem.index" v-if="subItem.group" class="two">
                                     <span slot="title">{{subItem.group}}</span>
                                     <el-menu-item v-for="index in subItem.subs"  :index="index.index">{{index.title}}</el-menu-item>
                                 </el-submenu>
@@ -25,6 +27,7 @@
                 </template>
             </el-menu>
         </div>
+    </div>
         <button class="sidebar-toggle" v-on:click="toggleList">
             <el-col class="sidebar-toggle-button">
                 <span></span>
@@ -33,6 +36,7 @@
             </el-col>
         </button>
     </div>
+
 </template>
 
 <script>
@@ -272,13 +276,22 @@
 </script>
 
 <style scoped>
+    .sidebardiv{
+        position: fixed;
+        width: 250px;
+        top: 90px;
+        bottom: 0;
+        z-index: 666;
+        min-height: 0;
+        overflow: auto;
+        background-color: #fff;
+   }
     .sidebar{
         display: block;
         position: absolute;
-        width: 250px;
+        width: 248px;
         left: 0;
-        top: 70px;
-        bottom:0;
+        top: 0px;
         /* background: #fff;*/
         z-index: 3;
         overflow: scroll;
@@ -290,7 +303,8 @@
     @media (max-width: 767px){
         .sidebardiv{
             /*background: #eef1f6;*/
-            height: 100%;
+            height: 85%;
+            top:70px;
         }
         .sidebar{
             display: block;
@@ -304,11 +318,45 @@
             overflow-x: scroll;
             z-index:2;
         }
-        .el-submenu .el-menu-item {
-            height: 50px;
-            line-height: 50px;
-            padding: 0 25px;
+        /*.el-submenu .el-menu-item {*/
+            /*height: 40px;*/
+            /*line-height: 40px;*/
+            /*padding: 0 25px;*/
+        /*}*/
+        .sidebar-toggle{
+            width: 100%;
         }
+    }
+    .el-submenu .el-menu{
+        background-color: #fff!important;
+    }
+    .el-menu--horizontal.el-menu--dark .el-submenu .el-menu-item.is-active, .el-menu-item.is-active{
+
+    }
+    .sidebardiv::-webkit-scrollbar,
+    .container::-webkit-scrollbar {
+        width: 2px;
+        height: 2px;
+    }
+
+    .sidebardiv::-webkit-scrollbar-track-piece ,
+    .container::-webkit-scrollbar-track-piece {
+        background-color: rgba(0, 0, 0, 0.1);
+        -webkit-border-radius: 6px;
+    }
+
+    .sidebardiv::-webkit-scrollbar-thumb:vertical,
+    .container::-webkit-scrollbar-thumb:vertical {
+        height: 5px;
+        background-color: rgba(125, 125, 125, 0.1);
+        -webkit-border-radius: 6px;
+    }
+
+    .sidebardiv::-webkit-scrollbar-thumb:horizontal,
+    .container::-webkit-scrollbar-thumb:horizontal {
+        width: 5px;
+        background-color: rgba(125, 125, 125, 0.1);
+        -webkit-border-radius: 6px;
     }
 </style>
 

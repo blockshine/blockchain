@@ -148,8 +148,6 @@
                             "gasPrice":"0x104c533c00"
                         }
                 }
-
-
                 </code></pre>
 
             </article>

@@ -85,12 +85,7 @@
                     "receipt": "0x13445......fcae7"
 
                 }
-
                 </code></pre>
-
-
-
-
                 <p><strong>响应示例</strong></p>
                 <blockquote>
                     <p>JSON格式</p>
@@ -105,7 +100,6 @@
                         "message": "Success ! "
                     }
                 }
-
                 </code></pre>
 
             </article>

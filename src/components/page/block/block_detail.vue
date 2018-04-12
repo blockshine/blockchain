@@ -7,9 +7,6 @@
                 <p><strong>请求语法</strong></p>
                 <pre v-pre="" data-lang=""><code class="lang-">GET /block/info</code></pre>
                 <p><strong>请求参数</strong></p>
-
-
-
                 <table>
                     <thead>
                     <tr>
@@ -185,7 +182,6 @@
                     <p>JSON格式</p>
                 </blockquote>
                 <pre v-pre="" data-lang=""><code class="lang-">
-
                      {
                         "msg": "操作成功",
                         "code": 0,
@@ -210,13 +206,7 @@
                             "transactions": [{...},{ ... }]
                             "uncles": ["0x1606e5...", "0xd5145a9..."]"blockNumber":"0"
                             }
-                    }
-
-
-
-
-
-                </code></pre>
+                    }</code></pre>
 
             </article>
         </div>

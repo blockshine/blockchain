@@ -53,7 +53,6 @@
 
                <pre v-pre="" data-lang="">
                     <code class="lang-">
-
                        {[
                            {
                             "to":"0x544E45893fa0e26eE4c8B272FD59dc341ac35793",
@@ -77,7 +76,6 @@
                     "msg": "操作成功"
                 }
                 </code></pre>
-
             </article>
         </div>
 

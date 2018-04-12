@@ -131,8 +131,6 @@
                                 "transactionHash":"0x8f439a3540a435b1b9859e64a645076ed607a225e70158aa003a794f2ef30c51"
                             }
                     }
-
-
                 </code></pre>
 
             </article>

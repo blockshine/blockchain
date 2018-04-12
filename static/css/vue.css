@@ -12,6 +12,7 @@
 .markdown-section ol, .markdown-section ul {
     padding-left: 24px;
     padding-left: 1.5rem;
+    border-left: 3px solid #53b9a7;
 }
 .markdown-section ol, .markdown-section p, .markdown-section ul {
     line-height: 25.6px;
@@ -21,10 +22,12 @@
 }
 .markdown-section figure, .markdown-section ol, .markdown-section p, .markdown-section ul {
     margin: 1.2em 0;
+    list-style: none;
 }
 .markdown-section blockquote {
     border-left: 4px solid #42b983;
-    border-left: 4px solid var(--theme-color, #42b983);
+    border-left: 5px solid #53b9a7;
+    /*border-left: 4px solid var(--theme-color, #42b983);*/
     color: #858585;
     margin: 2em 0;
     padding-left: 20px;
@@ -37,9 +40,12 @@
     font-size: 90%;
 }
 .ms-doc h3{
-    padding: 9px 10px 10px;
+    font-size: 22px;
+    font-weight: 400;
+    /*padding: 9px 10px 10px;*/
+    padding: 9px 10px 30px 10px;
     line-height: 17px;
-    background-color: #f5f5f5;
+    /*background-color: #f5f5f5;*/
     border: 0px solid #d8d8d8;
     border-bottom: 0;
     border-radius: 3px 3px 0 0;
@@ -59,19 +65,31 @@
     border-bottom: 1px solid #ddd;
 }
 .ms-doc article h2 {
+    border-left: 3px solid #53b9a7;
     margin: 24px 0 16px;
-    font-weight: 600;
-    line-height: 1.25;
+    font-weight: 400;
+    line-height: 2;
     padding-bottom: 7px;
-    font-size: 24px;
+    padding-left: 20px;
+    font-size: 20px;
     border-bottom: 1px solid #eee;
 }
-.ms-doc article p,
-.ms-doc article table,
-.ms-doc article pre{
+.ms-doc article p{
     margin-bottom: 15px;
-    line-height: 1.5;
+    line-height: 2;
+    color: #5e6d82;
+    /*!*padding-left: 20px;*! */
+}
+.ms-doc article pre,.ms-doc article table{
+    margin-top: 30px;
+    line-height: 2;
+    font-size: 14px;
     padding-left: 20px;
+    background-color: #fafafa;
+    border: 1px solid #eaeefb;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    padding:20px;
 }
 .ms-doc article .el-checkbox{
     margin-bottom: 5px;
@@ -82,6 +100,7 @@
     display: block;
     margin-bottom: 16px;
     margin-bottom: 1rem;
+    border: 0px solid #eaeefb;
     overflow: auto;
     width: 100%;
 }
@@ -99,72 +118,4 @@
 }
 body.sticky .sidebar, body.sticky .sidebar-toggle {
     position: fixed;
-}
-@media (max-width: 767px) {
-    .content{
-        background: none repeat scroll 0 0 #fff;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 50px;
-        padding: 4px 0px;
-        margin-bottom: 38px;
-        bottom: 0;
-        width: auto;
-        box-sizing: border-box;
-        overflow-y: scroll;
-    }
-    .markdown-section h3{
-        font-size: 24px;
-        font-size: 1.5rem;
-        margin: 4px 0 9.6px;
-        margin: 4px 0 .6rem;
-    }
-    .header .logo{
-        width: 100px!important;
-    }
-    .el-menu {
-        width: auto!important;
-    }
-    .el-submenu .el-menu{
-        background-color: rgba(0,0,0,0)!important;
-    }
-    .el-submenu .el-menu-item:hover, .el-submenu__title:hover  {
-        background-color: rgba(0,0,0,0)!important;
-        color: #20a0ff!important;
-
-    }
-    .is-active{
-        color: #20a0ff;
-        background-color: rgba(0,0,0,0)!important;
-    }
-    .sidebar-toggle {
-        background-color: transparent;
-        width: auto;
-    }
-
-    .sidebar-toggle {
-        background-color: transparent;
-        background-color: hsla(0, 0%, 100%, .8);
-        border: 0;
-        outline: none;
-        padding: 10px;
-        bottom: 0;
-        left: 0;
-        position: fixed !important;
-        text-align: center;
-        -webkit-transition: opacity .3s;
-        transition: opacity .3s;
-        width: 30px;
-        width: 284px;
-        z-index: 4;
-    }
-    .sidebar-toggle span {
-        background-color: #42b983;
-        background-color: var(--theme-color, #42b983);
-        display: block;
-        margin-bottom: 4px;
-        width: 16px;
-        height: 2px;
-    }
 }
