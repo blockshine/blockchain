@@ -67,42 +67,42 @@
                     <tr>
                         <td style="text-align:left">|logsBloom</td>
                         <td style="text-align:left">String</td>
-                        <td style="text-align:left">DATA, 256 Bytes - the bloom filter for the logs of the block. null when its pending block.</td>
+                        <td style="text-align:left">数据，256字节-区块的日志的BLOOM过滤器。挂起的区块值为NULL</td>
                     </tr>
                     <tr>
                         <td style="text-align:left">|receiptsRoot</td>
                         <td style="text-align:left">String</td>
-                        <td style="text-align:left">DATA, 32 Bytes - the root of the receipts trie of the block.</td>
+                        <td style="text-align:left">数据，32字节，这个区块的回执根树</td>
                     </tr>
                     <tr>
                         <td style="text-align:left">|unclesHash</td>
                         <td style="text-align:left">String</td>
-                        <td style="text-align:left">Array - Array of uncle hashes.</td>
+                        <td style="text-align:left">叔块hash集合</td>
                     </tr>
                     <tr>
                         <td style="text-align:left">|extraData</td>
                         <td style="text-align:left">String</td>
-                        <td style="text-align:left"> DATA - the "extra data" field of this block.</td>
+                        <td style="text-align:left">数据-这个区块的“额外数据”字段。</td>
                     </tr>
                     <tr>
                         <td style="text-align:left">|txTrieRoot</td>
                         <td style="text-align:left">String</td>
-                        <td style="text-align:left">DATA, 32 Bytes - the root of the transaction trie of the block.</td>
+                        <td style="text-align:left">数据，32字节的块的交易事务的根。</td>
                     </tr>
                     <tr>
                         <td style="text-align:left">|nonce</td>
                         <td style="text-align:left">string</td>
-                        <td style="text-align:left">DATA, 8 Bytes - hash of the generated proof-of-work. null when its pending block.</td>
+                        <td style="text-align:left">数据，8字节-生成工作证明的hash值，挂起的区块值为NULL</td>
                     </tr>
                     <tr>
                         <td style="text-align:left">|difficultyBI</td>
                         <td style="text-align:left">String</td>
-                        <td style="text-align:left">integer of the difficulty for all block</td>
+                        <td style="text-align:left">所有块的难度整数</td>
                     </tr>
                     <tr>
                         <td style="text-align:left">|difficulty</td>
                         <td style="text-align:left">String</td>
-                        <td style="text-align:left">QUANTITY - integer of the difficulty for this block.</td>
+                        <td style="text-align:left">数量- 这个区块的难度整数。</td>
                     </tr>
                     <tr>
                         <td style="text-align:left">|number</td>
@@ -117,7 +117,7 @@
                     <tr>
                         <td style="text-align:left">|genesis</td>
                         <td style="text-align:left">String</td>
-                        <td style="text-align:left">true</td>
+                        <td style="text-align:left">是否是创始块</td>
                     </tr>
 
                     <tr>
@@ -138,7 +138,7 @@
                     <tr>
                         <td style="text-align:left">|stateRoot</td>
                         <td style="text-align:left">String</td>
-                        <td style="text-align:left">DATA, 32 Bytes - the root of the final state trie of the block.</td>
+                        <td style="text-align:left">数据，32字节，这个区块的最终状态树的根</td>
                     </tr>
                     <tr>
                         <td style="text-align:left">|powBoundary</td>
@@ -165,7 +165,7 @@
                     <tr>
                         <td style="text-align:left">|timestamp</td>
                         <td style="text-align:left">String</td>
-                        <td style="text-align:left">QUANTITY - the unix timestamp for when the block was collated.</td>
+                        <td style="text-align:left">数量——用于核对块时的UNIX时间戳</td>
                     </tr>
                     <tr>
                         <td style="text-align:left">|encoded</td>

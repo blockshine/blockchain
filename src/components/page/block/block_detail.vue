@@ -68,108 +68,108 @@
                     <tr>
                     <td style="text-align:left">|number</td>
                     <td style="text-align:left">String</td>
-                    <td style="text-align:left"> 数量-区块号。挂起的区块值为NULL。</td>
+                    <td style="text-align:left">数量-区块号。挂起的区块值为NULL。</td>
                     </tr>
 
                     <tr>
                     <td style="text-align:left">|hash</td>
                     <td style="text-align:left">String</td>
-                    <td style="text-align:left"> DATA, 32 Bytes - hash of the block. null when its pending block.</td>
+                    <td style="text-align:left">数据，32字节-区块的hash值。挂起的区块值为NULL。</td>
                     </tr>
 
                     <tr>
                     <td style="text-align:left">|parentHash</td>
                     <td style="text-align:left">String</td>
-                    <td style="text-align:left"> DATA, 32 Bytes - hash of the parent block.</td>
+                    <td style="text-align:left">数据，32字节-父区块的hash值。</td>
                     </tr>
 
                     <tr>
                     <td style="text-align:left">|nonce</td>
                     <td style="text-align:left">String</td>
-                    <td style="text-align:left">DATA, 8 Bytes - hash of the generated proof-of-work. null when its pending block.</td>
+                    <td style="text-align:left">数据，8字节-生成工作证明的hash值。挂起的区块值为NULL</td>
                     </tr>
 
                     <tr>
                     <td style="text-align:left">|sha3Uncles</td>
                     <td style="text-align:left">String</td>
-                    <td style="text-align:left"> DATA, 32 Bytes - SHA3 of the uncles data in the block.</td>
+                    <td style="text-align:left">数据，32字节的区块中的数据段中的叔块。</td>
                     </tr>
 
                     <tr>
                     <td style="text-align:left">|logsBloom</td>
                     <td style="text-align:left">String</td>
-                    <td style="text-align:left"> DATA, 256 Bytes - the bloom filter for the logs of the block. null when its pending block.</td>
+                    <td style="text-align:left">数据，256字节-区块的日志的BLOOM过滤器。挂起的区块值为NULL</td>
                     </tr>
 
                     <tr>
                     <td style="text-align:left">|transactionsRoot</td>
                     <td style="text-align:left">String</td>
-                    <td style="text-align:left"> DATA, 32 Bytes - the root of the transaction trie of the block.</td>
+                    <td style="text-align:left">数据，32字节的区块的事务树的根。</td>
                     </tr>
 
                     <tr>
                     <td style="text-align:left">|stateRoot</td>
                     <td style="text-align:left">String</td>
-                    <td style="text-align:left"> DATA, 32 Bytes - the root of the final state trie of the block.</td>
+                    <td style="text-align:left">数据，32字节的区块的最终状态树的根。</td>
                     </tr>
                     <tr>
                     <td style="text-align:left">|receiptRoot</td>
                     <td style="text-align:left">String</td>
-                    <td style="text-align:left"> DATA, 32 Bytes - the root of the receipts trie of the block.</td>
+                    <td style="text-align:left">数据，32字节的收据根树的区块。</td>
                     </tr>
 
                     <tr>
                     <td style="text-align:left">|miner</td>
                     <td style="text-align:left">String</td>
-                    <td style="text-align:left"> DATA, 20 Bytes - the address of the beneficiary to whom the mining rewards were given.</td>
+                    <td style="text-align:left">数据，20字节-给采矿奖励的受益人的地址。</td>
                     </tr>
                     <tr>
                     <td style="text-align:left">|difficulty</td>
                     <td style="text-align:left">String</td>
-                    <td style="text-align:left"> QUANTITY - integer of the difficulty for this block.</td>
+                    <td style="text-align:left">这个区块的难度整数。</td>
                     </tr>
 
                     <tr>
                     <td style="text-align:left">|totalDifficulty</td>
                     <td style="text-align:left">String</td>
-                    <td style="text-align:left"> QUANTITY - integer of the total difficulty of the chain until this block.</td>
+                    <td style="text-align:left">数量-直到当前区块的总难度的系数。</td>
                     </tr>
                     <tr>
                     <td style="text-align:left">|extraData</td>
                     <td style="text-align:left">String</td>
-                    <td style="text-align:left"> DATA - the "extra data" field of this block</td>
+                    <td style="text-align:left">数据-此区块的“额外数据”字段</td>
                     </tr>
 
                     <tr>
                     <td style="text-align:left">|size</td>
                     <td style="text-align:left">String</td>
-                    <td style="text-align:left"> QUANTITY - integer the size of this block in bytes.</td>
+                    <td style="text-align:left">数量-此区块的大小以字节为单位的整数。</td>
                     </tr>
                     <tr>
                     <td style="text-align:left">|gasLimit</td>
                     <td style="text-align:left">String</td>
-                    <td style="text-align:left"> QUANTITY - the maximum gas allowed in this block.</td>
+                    <td style="text-align:left">这个区块允许的最大gas。</td>
                     </tr>
 
                     <tr>
                     <td style="text-align:left">|gasUsed</td>
                     <td style="text-align:left">String</td>
-                    <td style="text-align:left"> QUANTITY - the total used gas by all transactions in this block.</td>
+                    <td style="text-align:left">数量-该区块所有交易的总使用gas。</td>
                     </tr>
                     <tr>
                     <td style="text-align:left">|timestamp</td>
                     <td style="text-align:left">String</td>
-                    <td style="text-align:left"> QUANTITY - the unix timestamp for when the block was collated.</td>
+                    <td style="text-align:left">数量—用于核对区块时的UNIX时间戳。</td>
                     </tr>
                     <tr>
                     <td style="text-align:left">|transactions</td>
                     <td style="text-align:left">Object[]</td>
-                    <td style="text-align:left"> Array - Array of transaction objects, or 32 Bytes transaction hashes depending on the last given parameter.</td>
+                    <td style="text-align:left">交易对象数组的数组，或32字节的hash值取决于交易上给定的参数。</td>
                     </tr>
                     <tr>
                     <td style="text-align:left">|uncles</td>
                     <td style="text-align:left">String[]</td>
-                    <td style="text-align:left"> Array - Array of uncle hashes.</td>
+                    <td style="text-align:left">数组的数组hash的叔块。</td>
                     </tr>
 
                     </tbody>
