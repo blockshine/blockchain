@@ -57,21 +57,25 @@
                                 title: '产品概述'
                             },
                             {
-                                index: 'basicConcept',
-                                title: '基本概念'
-                            },
-                            {
-                                index:'public_chain_solution',
-                                title:'公有链解决方案'
-                            },
-                            {
-                                index:'private_chain_solution',
-                                title:'私有链解决方案'
-                            },
-                            {
-                                index:'solution',
-                                title:'行业解决方案'
+                                index: 'apiDescription',
+                                title: '调用说明'
                             }
+                            // {
+                            //     index: 'basicConcept',
+                            //     title: '基本概念'
+                            // },
+                            // {
+                            //     index:'public_chain_solution',
+                            //     title:'公有链解决方案'
+                            // },
+                            // {
+                            //     index:'private_chain_solution',
+                            //     title:'私有链解决方案'
+                            // },
+                            // {
+                            //     index:'solution',
+                            //     title:'行业解决方案'
+                            // }
                         ]
                     },
 

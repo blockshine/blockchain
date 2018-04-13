@@ -68,7 +68,7 @@
                     <tr>
                     <td style="text-align:left">|number</td>
                     <td style="text-align:left">String</td>
-                    <td style="text-align:left"> QUANTITY - the block number. null when its pending block.</td>
+                    <td style="text-align:left"> 数量-区块号。挂起的区块值为NULL。</td>
                     </tr>
 
                     <tr>

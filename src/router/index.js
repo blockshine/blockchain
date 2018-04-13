@@ -166,6 +166,10 @@ export default new Router({
                 {
                     path: '/data_write',
                     component: resolve => require(['../components/page/data/data_write.vue'], resolve)
+                },
+                {
+                    path: '/apiDescription',
+                    component: resolve => require(['../components/page/apiDescription.vue'], resolve)
                 }
             ]
         }
