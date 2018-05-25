@@ -1,0 +1,227 @@
+<template>
+    <div>
+        <div class="ms-doc">
+            <article class="markdown-section" id="main">
+
+                <h3>区块信息</h3>
+                <p><strong>请求语法</strong></p>
+                <pre v-pre="" data-lang=""><code class="lang-">GET /block/info</code></pre>
+                <p><strong>请求参数</strong></p>
+                <table>
+                    <thead>
+                    <tr>
+                        <th id="参数">参数</th>
+                        <th id="类型">类型</th>
+                        <th id="传参类型">传参类型</th>
+                        <th id="必须">必须</th>
+                        <th id="说明">说明</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <td>token</td>
+                        <td>string</td>
+                        <td>HEAD</td>
+                        <td>true</td>
+                        <td>授权码</td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>string</td>
+                        <td>body</td>
+                        <td>true</td>
+                        <td>区块编号</td>
+                    </tr>
+                    <tr>
+                        <td>fullTransactionObjects</td>
+                        <td>Boolean</td>
+                        <td>body</td>
+                        <td>true</td>
+                        <td>如果为真，则返回完整的事务对象，如果仅为假，则返回事务的散列值。</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <p>
+
+                </p>
+                <p><strong>响应参数</strong></p>
+                    <table>
+                    <thead>
+                    <tr>
+
+                        <th style="text-align:left">参数</th>
+                        <th style="text-align:left">类型</th>
+                        <th style="text-align:left">说明</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <td style="text-align:left" >chainData</td>
+                        <td style="text-align:left" >Object</td>
+                        <td style="text-align:left" >链数据结构</td>
+                    </tr>
+
+                    <tr>
+                    <td style="text-align:left">|number</td>
+                    <td style="text-align:left">String</td>
+                    <td style="text-align:left">数量-区块号。挂起的区块值为NULL。</td>
+                    </tr>
+
+                    <tr>
+                    <td style="text-align:left">|hash</td>
+                    <td style="text-align:left">String</td>
+                    <td style="text-align:left">数据，32字节-区块的hash值。挂起的区块值为NULL。</td>
+                    </tr>
+
+                    <tr>
+                    <td style="text-align:left">|parentHash</td>
+                    <td style="text-align:left">String</td>
+                    <td style="text-align:left">数据，32字节-父区块的hash值。</td>
+                    </tr>
+
+                    <tr>
+                    <td style="text-align:left">|nonce</td>
+                    <td style="text-align:left">String</td>
+                    <td style="text-align:left">数据，8字节-生成工作证明的hash值。挂起的区块值为NULL</td>
+                    </tr>
+
+                    <tr>
+                    <td style="text-align:left">|sha3Uncles</td>
+                    <td style="text-align:left">String</td>
+                    <td style="text-align:left">数据，32字节的区块中的数据段中的叔块。</td>
+                    </tr>
+
+                    <tr>
+                    <td style="text-align:left">|logsBloom</td>
+                    <td style="text-align:left">String</td>
+                    <td style="text-align:left">数据，256字节-区块的日志的BLOOM过滤器。挂起的区块值为NULL</td>
+                    </tr>
+
+                    <tr>
+                    <td style="text-align:left">|transactionsRoot</td>
+                    <td style="text-align:left">String</td>
+                    <td style="text-align:left">数据，32字节的区块的事务树的根。</td>
+                    </tr>
+
+                    <tr>
+                    <td style="text-align:left">|stateRoot</td>
+                    <td style="text-align:left">String</td>
+                    <td style="text-align:left">数据，32字节的区块的最终状态树的根。</td>
+                    </tr>
+                    <tr>
+                    <td style="text-align:left">|receiptRoot</td>
+                    <td style="text-align:left">String</td>
+                    <td style="text-align:left">数据，32字节的收据根树的区块。</td>
+                    </tr>
+
+                    <tr>
+                    <td style="text-align:left">|miner</td>
+                    <td style="text-align:left">String</td>
+                    <td style="text-align:left">数据，20字节-给采矿奖励的受益人的地址。</td>
+                    </tr>
+                    <tr>
+                    <td style="text-align:left">|difficulty</td>
+                    <td style="text-align:left">String</td>
+                    <td style="text-align:left">这个区块的难度整数。</td>
+                    </tr>
+
+                    <tr>
+                    <td style="text-align:left">|totalDifficulty</td>
+                    <td style="text-align:left">String</td>
+                    <td style="text-align:left">数量-直到当前区块的总难度的系数。</td>
+                    </tr>
+                    <tr>
+                    <td style="text-align:left">|extraData</td>
+                    <td style="text-align:left">String</td>
+                    <td style="text-align:left">数据-此区块的“额外数据”字段</td>
+                    </tr>
+
+                    <tr>
+                    <td style="text-align:left">|size</td>
+                    <td style="text-align:left">String</td>
+                    <td style="text-align:left">数量-此区块的大小以字节为单位的整数。</td>
+                    </tr>
+                    <tr>
+                    <td style="text-align:left">|gasLimit</td>
+                    <td style="text-align:left">String</td>
+                    <td style="text-align:left">这个区块允许的最大gas。</td>
+                    </tr>
+
+                    <tr>
+                    <td style="text-align:left">|gasUsed</td>
+                    <td style="text-align:left">String</td>
+                    <td style="text-align:left">数量-该区块所有交易的总使用gas。</td>
+                    </tr>
+                    <tr>
+                    <td style="text-align:left">|timestamp</td>
+                    <td style="text-align:left">String</td>
+                    <td style="text-align:left">数量—用于核对区块时的UNIX时间戳。</td>
+                    </tr>
+                    <tr>
+                    <td style="text-align:left">|transactions</td>
+                    <td style="text-align:left">Object[]</td>
+                    <td style="text-align:left">交易对象数组的数组，或32字节的hash值取决于交易上给定的参数。</td>
+                    </tr>
+                    <tr>
+                    <td style="text-align:left">|uncles</td>
+                    <td style="text-align:left">String[]</td>
+                    <td style="text-align:left">数组的数组hash的叔块。</td>
+                    </tr>
+
+                    </tbody>
+                    </table>
+
+                <p><strong>请求示例</strong></p>
+                <pre v-pre="" data-lang=""><code class="lang-">http://localhost:8090/block/info?bnOrId=0x1942&fullTransactionObjects=true</code></pre>
+                <p><strong>响应示例</strong></p>
+                <blockquote>
+                    <p>JSON格式</p>
+                </blockquote>
+                <pre v-pre="" data-lang=""><code class="lang-">
+                     {
+                        "msg": "操作成功",
+                        "code": 0,
+                        "chainData": {
+                            "number": "0x1b4", // 436
+                            "hash": "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331",
+                            "parentHash": "0x9646252be9520f6e71339a8df9c55e4d7619deeb018d2a3f2d21fc165dde5eb5",
+                            "nonce": "0xe04d296d2460cfb8472af2c5fd05b5a214109c25688d3704aed5484f9a7792f2",
+                            "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                            "logsBloom": "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331",
+                            "transactionsRoot": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+                            "stateRoot": "0xd5855eb08b3387c0af375e9cdb6acfc05eb8f519e419b874b6ff2ffda7ed1dff",
+                            "miner": "0x4e65fda2159562a496f9f3522f89122a3088497a",
+                            "difficulty": "0x027f07", // 163591
+                            "totalDifficulty":  "0x027f07", // 163591
+                            "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000",
+                            "size":  "0x027f07", // 163591
+                            "gasLimit": "0x9f759", // 653145
+                            "minGasPrice": "0x9f759", // 653145
+                            "gasUsed": "0x9f759", // 653145
+                            "timestamp": "0x54e34e8e" // 1424182926
+                            "transactions": [{...},{ ... }]
+                            "uncles": ["0x1606e5...", "0xd5145a9..."]"blockNumber":"0"
+                            }
+                    }</code></pre>
+
+            </article>
+        </div>
+
+    </div>
+</template>
+
+<script>
+    export default {
+        data: function () {
+            return {}
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>
